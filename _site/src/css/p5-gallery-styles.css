@@ -1,0 +1,133 @@
+.p5-gallery {
+    position: relative;
+    min-height: 80vh;
+    /* margin-inline: 20px; */
+    overflow: hidden;
+    z-index: 20;
+    /* Add a default background color and a smooth transition */
+    /* background-color: #1a1a1a; */
+    transition: background-color 0.8s ease-in-out;
+    background:
+        linear-gradient(90deg, rgb(39, 54, 103), rgba(52, 52, 110, 0.328)),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 259 259' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.89' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+
+
+>.carousel-title {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* This perfectly centers it horizontally */
+    height: 50px;
+    /* Matches your button height */
+    margin: 10px;
+    z-index: 20;
+    font-family: 'Satoshi', sans-serif;
+    /* Typography Styling (Adjust to match your site's theme) */
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    /* Center the text perfectly inside its own div */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+>#gal-offset-svg {
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+}
+
+>#gal-offset-svg path {
+    fill: none;
+    stroke-width: 2;
+    stroke: #222;
+    stroke-dasharray: 7px;
+}
+
+>.button-svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+>.p5-img {
+    /* display: none; */
+    display: flex;
+    place-content: center;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 40px;
+    overflow: hidden;
+    /* background-color: #ff3737; */
+    /* offset-path: path("M -1000 700 C 600 100 800 100 2000 700 "); */
+    /* offset-anchor:; */
+    /* offset-rotate: 0deg; */
+    /* offset-distance: calc((((sibling-index() - 1)/(sibling-count() - 1))*100%) + var(--delta-offset, 0%)); */
+    /* offset-rotate: calc((-25deg) + (((sibling-index() - 1)/(sibling-count() - 1))*50deg)); */
+    transition: 0.3s ease all;
+
+    &:has(+ *:hover) {
+        /* --delta-offset: -1%; */
+    }
+
+    &:hover {
+        translate: 0 -20px;
+        z-index: 20;
+        background-color: #222;
+        /* scale: 1.02; */
+
+        &+* {
+            /* --delta-offset: 1%; */
+        }
+    }
+}
+
+>.button {
+    position: absolute;
+    bottom: 0%;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+    border-radius: 100vw;
+    /* background-color: #222; */
+    margin: 10px;
+    cursor: pointer;
+}
+
+>.left-button {
+    left: 25%;
+
+    >svg {
+        transform: scaleX(-1);
+    }
+}
+
+>.right-button {
+    right: 25%;
+}
+
+
+/* >div:nth-of-type(1) {
+            offset-distance: 0%;
+        }
+        >div:nth-of-type(2) {
+            offset-distance: 20%;
+        }
+        >div:nth-of-type(3) {
+            offset-distance: 40%;
+        }
+        >div:nth-of-type(4) {
+            offset-distance: 60%;
+        }
+         >div:nth-of-type(5) {
+            offset-distance: 100%;
+        } */
+}

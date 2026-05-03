@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Covered+By+Your+Grace&family=Homemade+Apple&family=Meddon&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+:root {
+    --expandedRows: "1fr 1fr 1fr 1fr 1fr";
+    --yellow-green-accent: #d0ef8e;
+    --yellow-green-accent-1: #d0ef8eb3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    font-size: 21px;
+}
+body {
+    font-family: "EB Garamond", serif;
+    /* background-color: #faf2e9;1 */
+    color: #000;
+    /* font-weight: 400; */
+    /* overflow-y: hidden; */
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+
+
+/* h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+} */
+
+
+
+h3 {
+    font-weight: normal;
+    font-family: Garamond, Serif;
+    text-align: center;
+}

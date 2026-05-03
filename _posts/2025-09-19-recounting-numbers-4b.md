@@ -1,0 +1,281 @@
+---
+title: Reals ctd.
+layout: default
+tags: Analysis
+categories: Farm
+excerpt: "We will now discuss the most important aspect of Real Numbers. One that allows a very powerful study of objects like functions, more importantly continous functions between such a number system. And even before that objects like sequences and series!
+"
+---
+<span class="interest"><em>Hyping $liminf$ and $limsup$.</em></span>
+
+
+We will now discuss the most important aspect of Real Numbers. One that allows a very powerful study of objects like functions, more importantly continous functions between such a number system. And even before that objects like sequences and series!
+
+<video autoplay muted loop style="width:80%; display:block; margin: 0 auto;" >
+  <source src="\src\vector\reals-v0.0.mp4" type="video/mp4">
+</video>
+
+
+It starts with a simple and strong existence lemma, one that captures almsot the entire glory of Real Numbers.
+
+
+
+## Least Upper Bound Property - The glory of reals
+<div class="proposition">(Least Upper Bound property).
+    Let $E$ be a non-empty subset of $\mathbb{R}$. If $E$ has an upper bound (i.e. $\exists M \in \mathbb{R}$ such that $e \le M ~\forall e \in E$) then $E$ has a unique least upper bound (i.e. L such that $L$ is an upper bound to $E$ but $M < L$ is not)!
+<br><br>
+Also, we define $sup(E)$ (the supremum) of $E$ to be the least upper bound of E. If there is no upper bound to a subset $E \subset \mathbb{R}$, then we let $sup(E) = + \infty$. And if $E$ is empty, we let $sup(E) = -\infty$. We can talk about lower bounds, greatest lower bounds and define $inf(E)$ - the infimum similarly.       
+</div>
+
+<div class="proof">
+    I think its important to recall this proof time to time, for the result is so interesting and the proof shall reveal the nature of reals, most importantly how to glide through many properties of reals. So let's see the idea.
+
+The idea is to get hold of two rationals  one of which is an upper bound and the other is not. In fact, we want to get hold of a sequence of such pair of numbers, indexed by a positive natural $n$. And then between every pair of such rationals, it turns out we can find another rational which under  a specific decrement is not an upper bound! That is, 
+
+$$\frac{L}{n} < \frac{m_n}{n} \le \frac{K}{n}$$ 
+
+where $\left( m_n -1 \right) /n$ is not an upper bound! It turns out there is unique such rational $m_n /n$ and it forms a Cauchy sequence, with the index $n$! This in particular means that, the gap between the upper bound $m_n /n$ and the non-upper bound $\left( m_n - 1 \right) /n$ fades with increasing $n$! And the $LIM_{n \to \infty}$ of this sequence $m_n /n$ precisely turns out to be the least upper bound to the given set $E$. 
+<br><br> 
+The content of the set $E$ lies in choosing $L$ and $K$. If $M$ is an upper bound of $E$ (since it is given apriori that it exists) then for any $n \ge 1$ we let $K$ to be the integer such that $K /n \ge  M.$ And since $E$ is non-empty, we have $e \in E$ and we let $L$ be an integer such that $L /n < e!$           
+
+The idea behind existence of such a rational $m_n /n$: First note that there is always an upper bound with $m_n = K$. Now further assume on the contrary that for any $m_n /n$ which is an upper bound, $\left( m_n - 1 \right) /n$ is an upper bound too. 
+
+Then one can inductively show that $\left( m - l \right) /n$ is an upper bound for all $l \ge 0$. So, $L < m - l$ for all $l > 0$. This is a contradiction. The uniqueness of $m_n /n$ with this property comes from a small consistency check, via proof by contradiction.
+
+<br><br>
+The main idea in this proof is the fading gap between a a sequence of upper bound and a non-upper bound. And it turns out rigorously that such a sequences ends up being the least upper bound. We managed to boil down the existence of least upper bounds to LIMITs of a Cauchy seqeunces, which are precisely what Reals are made of!
+</div>
+
+
+And a brilliant result following from the least upper bound property (LUB) is the existence of $\sqrt{2}$!
+
+<div class="proposition">
+    There exists a positive real number $x$ such that $x^2 = 2.$ 
+</div>
+<div class="proof">
+    Let $E$ be the set $\left\{y \in  E : y \ge  0 \text{ and } y^2 < 2\right\}$. This set is non-empty ($1 \in E$) and upper bounded ($y < 2~ \forall y \in E).$ Thus there is a real number $x = sup(E).$ This is positive since $x > 1$. We want to show that $x^2 = 2$!
+
+Assume on the contrary that either $x^2 > 2$ or $x^2 < 2$. Let's start wuth $x^2 < 2$. Consider $0 < \epsilon < 1$. Then,
+
+$$ \left( x+ \epsilon \right) ^2 = x^2 + 2\epsilon x + \epsilon^2 \le x^2 + 4\epsilon + \epsilon = 5\epsilon.$$
+
+But since we can choose an $\epsilon$ such that $x^2 + 5\epsilon < 2$ (because $x^2 < 2$). So, $x+\epsilon \in E$! This is a contradiction since $x$ is an upper bound of $E$.       
+
+<br>
+
+Now let's assume $x^2 > 2$. Then, 
+
+$$ \left( x - \epsilon \right) ^2 = x^2 - 2\epsilon x + \epsilon^2 \ge  x^2 - 2\epsilon x \ge x^2 - 4\epsilon.$$
+ 
+But there exists an $\epsilon$ such that $x^2 - 4\epsilon > 2$ since $x^2 > 2$. So, $\left( x-\epsilon \right) ^2 > 2$. Thus $x - \epsilon \ge y$ for all $y \in E$ (otherwise $(x-y)^2 < y^2 < 2$). But this contradicts the fact that $x$ is the <em>least</em> upper bound! Thus $x^2 = 2.$  
+</div>
+
+Using this recipe, we  are ready to define exponents of real number by a fractional (rational)! This is very intuitively defined by,
+
+<div class="axiom">
+    Let $x \ge 0$ be a non-negative real, and let $n \ge 1$ be a positive integer. We define $x^{1 /n}$, also known as the <em>nth root of $x$ </em>, by the formula
+
+$$ x^{1 /n} := sup \left\{y \in \mathbb{R}: y\ge 0 \text{ and } y^n \le  x\right\}. $$  
+</div>
+
+It turns out indeed that the above set has an upper bound. Now on the lines of $\sqrt{2}$, we have all <em>nth roots</em>  of a non-negative real number, precisely because of the Least upper bound property! Basically it turns out as we can check -- If $y = x^{1 /n}$ then $y^n = x$ which is not immediately clear from the defintion, but LUB seals the deal for us! Many familiar exponent laws now follow, especially now even the new ones involving <em>rational</em> exponents! Fractional powers raised to integral powers!
+
+But Reals are not just about  existence of <em>nth</em> roots! Remember we had included in the rationals all the possible LIMITs to certain rational sequences! Are these all simply <em>nth roots</em>? No, the Reals are much more than that. For example (transcendental) numbers like $\pi, e$ emerge! We are already set on a trajectory to understand a general glory of Real numbers, beyond the square roots. If square roots were the only number we required we could have completed rationals by simply these. But we didn't, we instead approached the extension broadly by taking formal LIMITS of rational sequences. 
+
+We now develop the theory of limits on real numbers, which allows us to take much more than <em>nth roots</em> of positive rationals. This will remove the sheer formal nature of LIMITs and allow us to manipulate them more intuitively yet rigorously through notion of convergence. The LUB property again leads the way, when studied in the context of set of all elements in the sequences.
+
+Sequences and Cauchy sequences can be consistently (agreeing with $\mathbb{Q} \subset \mathbb{R}$) constructed on real numbers too. We then have the following notion of Convergence.
+
+## Real sequences 
+   
+<div class="axiom">
+    (Convergence and limits). Let $\epsilon > 0$ be a real number, and let $L$ be a real number. We say that a sequence $\left( a_n \right) _ 0 ^\infty$ converges to $L$ iff it is eventually $\epsilon$-close to $L$ for every $\epsilon >0$.    
+<br><br>
+If a sequence $\left( a_n \right)_ 0 ^\infty $ converges to a real number $L$, then it is said to be convergent and that its <em>limit</em> is L, writing
+$$ L = lim_{n\to \infty} a_n.$$   
+</div>
+
+It turns out that a sequence can't possibly converge to two different real number $L$ and $L'$ through a simple proof by contradiction.
+<br>
+We already saw that the sequence $\left( 1 /n \right)_ 1 ^\infty$ is a Cauchy sequence. In particular, it <em>converges</em> to $0$!
+   
+<div class="proposition">
+    $lim_{n\to \infty} 1 /n = 0.$
+</div>
+<div class="proof">
+    First note that, for every $\epsilon >0$ we can find $N$ such that $N > 1 /\epsilon$. So that for any $n \ge  N$, $$ \left| a_n - 0 \right| = \left| 1 /n - 0 \right| = 1 /n \le  1 /N < 1 /\epsilon.$$ So $1 /n$ is eventually $\epsilon$-close to $0$ for any arbitrary $\epsilon >0.$    
+</div>
+
+<div class="proposition">
+    If $(a_n)_ o^\infty$ is a convergent sequences then it is also a Cauchy sequence. 
+</div>
+<div class="proof">
+    The proof follows from a simple application of triangular inequality and using the convergence criteria for any $\epsilon /2 >0.$ 
+</div>
+
+In fact for  real numbers, it also turns out that every Cauchy sequence is a convergent sequence! This is precisely a stronger manifestation of our construction. A rational sequence for example can be constructed without it ever converging (to some rational), but for reals, every sequence which is Cauchy is convergent. In particular a rational sequence which is Cauchy is necessarily convergent in Reals. In fact we are now ready to claim that the formal LIMITs are the genuine <em>limits</em>! That is, we have the following weaker result on Reals that the Rational Cauchy sequences are convergent.
+
+<div class="proposition">
+    Suppose that $\left( a_n \right) _ 0^\infty$ is a Cauchy sequence of rational numbers. Then $\left( a_n \right) _ 0^\infty$ converges to $LIM_{n\to \infty}a_n$ i.e. 
+
+$$ \underset{n\to \infty}{LIM}a_n = \underset{n\to \infty}{lim} a_n. $$ 
+  
+</div>
+
+<div class="proof">
+    Let $L := LIM_{n\to \infty}a_n$. Suppose on the contrary that $a_n$ is not eventually $\epsilon$-close to $L$ for some $\epsilon$. And for this particular $\epsilon$, there exists $N$ such that for all $n,m \ge  N$ we have $ \left| a_n - a_m \right| \le \epsilon /2$ because $a_n$ is Cauchy. By the triangular inequality, we then have $\left| a_n - L \right| >   \epsilon /2$ for any $n \ge N$, by using an auxilliary $n_0$ such that $|a_{n_0} - L | > \epsilon$. This $n_0$ exists because of our contrary assumption.
+
+$$ \left| a_{n_0} - L \right| \le \left| a_{n_0} - a_n \right| + \left| a_n - L \right| \le \epsilon /2 + \left| a_n - L \right| .$$ 
+
+Thus, either $a_n > L + \epsilon /2$ for all $n \ge  N$ or $ a_n < L - \epsilon /2$ for all $n\ge N$. Which then gives, $LIM_{n\to \infty} a_n > L$ or $LIM_{n\to \infty} < L$ which is clearly a contradiction.    
+<br><br>
+
+An important lesson from this proof is that, if a Cauchy sequence is not eventually $\epsilon$-close to some real number $L$ then the sequence tends to stay away from $L$ from both the sides, either completely away on one side or completely away from the other! This also means that the formal LIMIT stays away from $L$ in a similar fashion! But since $L$ is the LIMIT itself, we had a brilliant contradiction!
+  
+</div>
+
+<div class="sexy">
+    What about all the <em>Real</em> Cauchy sequences? That's the stronger version of this result. It is not immediately clear! We donot apriori know the eventual behavior of such sequences. For rationals we defined them to be the formal LIMITs and in this sense, the above proof is a mere consistency check. Thus, the eventual behavior of real sequences is still a black box (there is no notion of LIM of a real Cauchy sequence), and our theoretical efforts in the rest of this article would be to shine light on precisely this. And it is this beauty that pushed me to write this article. It's about the concepts of limit points, limit superior and limit inferior. The sequences tend to dance between these points and we will soon see <em>how exactly this dance happens</em>!
+</div>
+
+Before that,  we have the following preliminary architectural information about the limits.
+
+<div class="proposition">
+    (Limit laws). Let $(a_n)_{n=m}^{\infty}$ and $(b_n)_{n=m}^{\infty}$ be convergent sequences of real numbers, and let $x, y$ be the real numbers $x := \lim_{n \to \infty} a_n$ and $y := \lim_{n \to \infty} b_n$.
+<br> <br>
+<ol type="a" style="margin-left:20px;">
+    <li>The sequence $(a_n + b_n)_{n=m}^{\infty}$ converges to $x + y$; in other words,
+    $$\lim_{n \to \infty} (a_n + b_n) = \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n.$$
+    </li>
+    <li>The sequence $(a_n b_n)_{n=m}^{\infty}$ converges to $xy$; in other words,
+    $$\lim_{n \to \infty} (a_n b_n) = \left( \lim_{n \to \infty} a_n \right) \left( \lim_{n \to \infty} b_n \right).$$
+    </li>
+    <li>For any real number $c$, the sequence $(c a_n)_{n=m}^{\infty}$ converges to $cx$; in other words,
+    $$\lim_{n \to \infty} (c a_n) = c \lim_{n \to \infty} a_n.$$
+    </li>
+    <li>The sequence $(a_n - b_n)_{n=m}^{\infty}$ converges to $x - y$; in other words,
+    $$\lim_{n \to \infty} (a_n - b_n) = \lim_{n \to \infty} a_n - \lim_{n \to \infty} b_n.$$
+    </li>
+    <li>Suppose that $y \neq 0$, and that $b_n \neq 0$ for all $n \geq m$. Then the sequence $(b_n^{-1})_{n=m}^{\infty}$ converges to $y^{-1}$; in other words,
+    $$\lim_{n \to \infty} b_n^{-1} = \left( \lim_{n \to \infty} b_n \right)^{-1}.$$
+    <li>Suppose that $y \neq 0$, and that $b_n \neq 0$ for all $n \geq m$. Then the sequence $(a_n/b_n)_{n=m}^{\infty}$ converges to $x/y$; in other words,
+    $$\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}.$$
+    </li>
+    <li>The sequence $(\max(a_n, b_n))_{n=m}^{\infty}$ converges to $\max(x,y)$; in other words,
+    $$\lim_{n \to \infty} \max(a_n, b_n) = \max\left(\lim_{n \to \infty} a_n, \lim_{n \to \infty} b_n\right).$$
+    </li>
+    <li>The sequence $(\min(a_n, b_n))_{n=m}^{\infty}$ converges to $\min(x,y)$; in other words,
+    $$\lim_{n \to \infty} \min(a_n, b_n) = \min\left(\lim_{n \to \infty} a_n, \lim_{n \to \infty} b_n\right).$$
+    </li></li>    
+</ol> 
+</div>
+<div class="proof">
+    The most important thing to remember is, these are valid ONLY if the two sequences in question are CONVERGENT! That is, we must apriori have the information that the limit of the said sequence even exists. Otherwise the answers one gets are quite wild.
+</div>
+
+We should note that one can work with an extended Real Number system $R ^ * $ in which we include $-\infty, +\infty$ along with $\mathbb{R}$. We can define negatation and order on $\mathbb{R}^* $, but arithmetic operation are not cool here. For example cancellation law would immediately breakdown. Anyway, it's convinient to discuss supremum and infimum of sets, especially when those sets are sets of elements of sequences! We come across many series which seem to diverge to $+\infty$ (defined by its sheer order w.r.t other reals, i.e. $+\infty$ > x for all $x \in \mathbb{R}$).
+
+<div class="axiom">
+    Let $\left( a_n \right) _ 0^\infty$ be a sequence of real numbers. THen we define $sup\left( a_n \right) _ 0 ^\infty$ to be the supremum of the set $\left\{a_n : n\ge m\right\}$, and $inf\left( a_n \right) _ {0}^\infty$ to be the infimum of the set $\left\{a_n : n\ge  m\right\}.$
+</div>
+
+Some examples:
+- $a_n := \left( -1 \right) ^n$. $sup(a_n) = 1$ and $inf(a_n) = -1$. 
+- $a_n := 1 /n$. $sup(a_n) = 1$, $inf(a_n) = 0$.  
+- $a_n : n$. $sup(a_n) = + \infty$, $inf(a_n) = 1$.
+- Bounded sequences have <em>finite</em> supremum and infimum! Finite in the sense that they are real numbers instead of $+\infty,-\infty.$
+
+The Least Upper Bound property we noted for the subsets of real numbers is true without any conditions of boundedness, when we let the supremum be an extended real number.
+
+<div class="proposition not">
+    Let $(a_n)_ 0^\infty$ be a sequence of real numbers, and let $x$ be the extended real number $x:= sup(a_n)_ 0 ^\infty$. Then we have $a_n \le  x$ for all $n \ge m$. Also, whenever $M \in \mathbb{R}^* $ is an upper bound for $a_n$ (i.e. a_n \le  M for all $n\ge  m$), we have $x\le M$. Finally, for every extended real number $y$ for which $y < x$, there exists at least one $n \ge m$ for each $y< a_n < x.$          
+</div> 
+
+Similar result can be obtained for infima. This notion of supremum and infimum is useful to formulate a convergence result on certain bounded sequences. Convergent sequences can be seen to be bounded easily. The other direction is tempting to ask. For example, 
+is the sequence $a_n : = x^n; 0 < x < 1$ convergent? Yes as it turns out through the next proposition. Is the sequence $a_n = (-1)^n$ convergent? Clearly, no (this is not Cauchy)! The following proposition captures the difference between the above sequences although both are bounded.
+
+<div class="proposition">
+    (Monotone bounded sequences converge). Let $\left( a_n \right) _ 0^\infty$ be a sequence of real numbers which has some finite upper bound $M \in \mathbb{R}$ and which is also increasing (i.e $a_{n+1}\ge a_n$ for all $n\ge m$). Then $\left( a_n \right) _ 0 ^\infty$ is convergent, and in fact 
+$$ \lim_{n\to \infty}a_n = sup\left( a)n \right) _ 0 ^\infty \le  M.$$ 
+
+Similar is true for sequences bounded below and decreasing, with the limit equal to the infimum.
+</div>
+<div class="proof">
+Let $x = sup(a_n)$. Then $a_n \le x $ for all $n \in \mathbb{N}$. And for any $\epsilon >0$, there is an $N$ such that $a_N > x - \epsilon$, since $x - \epsilon < x.$ So,
+
+$$ x - \epsilon < a_N \le x \implies \left| a_N - x \right| < \epsilon.$$ 
+And since for any $n \ge  N$, $a_n > a_N > x - \epsilon,$ we have:
+
+$$ \left| a_n - x \right| < \epsilon \text{ for all } n\ge N.$$ 
+
+Thus, $a_n$ is eventually $\epsilon$-close to any $\epsilon >0!$ Thus the monotonous and bounded sequnce $a_n$ converges to $x.$     
+</div>
+
+Such an existence result paired with the limit laws allow us to compute limits of sequences in many cases! A perfect example being $a_n:= x^n$ for $0 < x < 1 $.  
+
+
+## The dance of Real sequences - limit points, limsup, and liminf.
+
+Sequences like, 
+
+$$2.9, -1.01,2.99,-1.001,2.999,-1.0001, \ldots  $$ 
+ 
+are confusing. They seem to converge to two different real numbers, $3$ and $-1$. But doesn't converge to either of them! We reconcile this behavior through the following rigorous notion of <em>limit points.</em>
+
+<div class="axiom">
+    (Limit Points). Let $\left( a_n \right) _ 0 ^\infty$ be a sequence of real numbers, let $x$ be a real number, and let $\epsilon > 0$ be a real number. We say that $x$ is $\epsilon$-adherent to $(a_n)$ iff there exists an $n \ge 0$ such that $a_n$ is $\epsilon$-close to $x.$ We say that $x$ is <em>continually $\epsilon$-adherent </em>  to $\left( a_n \right) $ iff it is $\epsilon$-adherent to $\left( a_n \right) _ {n=N}^\infty$ for every $N \ge m.$ We say that $x$ is a <em>limit point</em>or adherent point of $\left( a_n \right) $ iff it is continually $\epsilon$-adherent to $\left( a_n \right)$ for every $\epsilon>0$.     
+</div>
+
+ 
+The intuition behind this is pretty clear. But there is an interesting equivalence between $\epsilon$-adherence for all $\epsilon >0$ and continual $\epsilon$-adherence for all $\epsilon>0$! See the past article on <a href="/field-farmer/2025/07/20/e-adherence.html" target="_blank">On $\epsilon$-adherence</a>. It's unsettlingly obvious :).
+
+So the confusing points in the last example which the sequence <em>seem</em> to converge to turn out precisely to be the limit points! As can we checked very easily, limits are also limit points!
+
+For a given sequence one can study two special kind of limit points creating a stage for the sequences to dance. 
+
+<div class="axiom">
+    (Limit superior and limit inferior). Suppose that $(a_n)_{n=m}^{\infty}$ is a sequence. We define a new sequence $(a_N^+)_{N=m}^{\infty}$ by the formula
+$$ a_N^+ := \sup(a_n)_{n=N}^{\infty}. $$
+<p>
+More informally, $a_N^+$ is the supremum of all the elements in the sequence from $a_N$ onwards. We then define the <em>limit superior</em> of the sequence $(a_n)_{n=m}^{\infty}$, denoted $\limsup_{n \to \infty} a_n$, by the formula
+</p>
+$$ \lim \sup_{n \to \infty} a_n := \inf(a_N^+)_{N=m}^{\infty}. $$
+<p>
+Similarly, we can define
+</p>
+$$ a_N^- := \inf(a_n)_{n=N}^{\infty} $$
+<p>
+and define the <em>limit inferior</em> of the sequence $(a_n)_{n=m}^{\infty}$, denoted $\liminf_{n \to \infty} a_n$, by the formula
+</p>
+$$ \lim \inf_{n \to \infty} a_n := \sup(a_N^-)_{N=m}^{\infty}. $$
+</div>
+
+This definition is a further effort to differentiate two different limit points in our prototype example. The $limsup_{n\to \infty}$ there was $3$ and $lim inf_{n\to \infty}$ was $-1.$ Not that these beasts can be extended real numbers too. 
+
+Tao gives a $1$-dimensional piston analogy to this situation of limsup, and liminf, which is more apt considering the real line. However to make the dance more clearer, I like to think in the following more natural illustration. 
+<figure>
+    <img style="width:100%" src="\src\images\Field-Farmer\limsupinf.png" alt="">
+</figure>
+
+To understand this however, we note the most important and enlightening proposition in our development of theory of limits on real sequences! This paves way in particular for proving the completeness of Reals! 
+
+<div class="proposition">
+   Let $(a_n)_{n=m}^{\infty}$ be a sequence of real numbers, let $L^+$ be the limit superior of this sequence, and let $L^-$ be the limit inferior of this sequence (thus both $L^+$ and $L^-$ are extended real numbers).
+
+<ol class="list" type="a">
+    <li>For every $x > L^+$, there exists an $N \ge m$ such that $a_n < x$ for all $n \ge N$. (In other words, for every $x > L^+$, the elements of the sequence $(a_n)_{n=m}^{\infty}$ are eventually less than $x$.) Similarly, for every $y < L^-$ there exists an $N \ge m$ such that $a_n > y$ for all $n \ge N$.</li>
+    <li>For every $x < L^+$, and every $N \ge m$, there exists an $n \ge N$ such that $a_n > x$. (In other words, for every $x < L^+$, the elements of the sequence $(a_n)_{n=m}^{\infty}$ exceed $x$ infinitely often.) Similarly, for every $y > L^-$ and every $N \ge m$, there exists an $n \ge N$ such that $a_n < y$.</li>
+    <li>We have $\inf(a_n)_{n=m}^{\infty} \le L^- \le L^+ \le \sup(a_n)_{n=m}^{\infty}$.</li>
+    <li>If $c$ is any limit point of $(a_n)_{n=m}^{\infty}$, then we have $L^- \le c \le L^+$.</li>
+    <li>If $L^+$ is finite, then it is a limit point of $(a_n)_{n=m}^{\infty}$. Similarly, if $L^-$ is finite, then it is a limit point of $(a_n)_{n=m}^{\infty}$.</li>
+    <li>Let $c$ be a real number. If $(a_n)_{n=m}^{\infty}$ converges to $c$, then we must have $L^+ = L^- = c$. Conversely, if $L^+ = L^- = c$, then $(a_n)_{n=m}^{\infty}$ converges to $c$.</li>
+</ol> 
+</div>
+<div class="proof">
+    This is the dance I kept refering to! This is the core information about real sequences we have.  
+</div>
+
+There are some neat results that follow from the above proposition. Namely, the comparision principle, squeeze test/sandwich test and the zero test for sequences!
+
+We are now ready to prove the completeness of Reals! That is, all the Real Cauchy sequences converge. This, along with the notion of subsequences and a discussion on ways to complete the rationals will occupy the content of next  article.
+

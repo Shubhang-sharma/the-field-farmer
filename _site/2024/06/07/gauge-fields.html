@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/hstyles.css">
+    <link rel="stylesheet" href="/src/css/pstyles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <title>Shubhang Sharma</title>
+    <script>
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                // Notice the brackets around 'mathtools' below:
+                packages: { '[+]': ['mathtools'] },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-main">
+            <div class="name">SHUBHANG SHARMA.</div>
+            <div class="phi">
+                $\sum_i\varphi_i$
+            </div>
+            <div class="last-active">
+                ~ MAY 03.2026, HYDERABAD.
+            </div>
+        </div>
+        <nav>
+            <div class="link"><a href="/">HOME</a></div>
+            <div class="link"><a href="/academic.html">ACADEMIC</a></div>
+            <div class="link"><a href="/creative.html">CREATIVE</a></div>
+            <div class="link"><a href="/fieldfarm">MATH-PH</a></div>
+            <div class="link"><a href="/fieldnotes">FIELDNOTES</a></div>
+            <div class="link"><a href="/blog">BLOG</a></div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="page-container">
+            <div class="bg">
+                
+                
+                <h1 class="page-heading">Gauge Fields and Geometry</h1>
+                
+                <h1 id="definitions">Definitions</h1>
+
+<p>Created: June 7, 2024 4:48 PM
+Tags: Extracts
+Status: In progress</p>
+
+<h1 id="contents">Contents</h1>
+
+<hr />
+
+<h1 id="part-i-electromagnetism">Part I Electromagnetism</h1>
+
+<hr />
+
+<h2 id="chapter-1---the-two-pairs-maxwell-equations">Chapter 1 - (the two pairs) Maxwell Equations</h2>
+
+<hr />
+
+\[\nabla.B = 0 \\
+\nabla\times E + \frac{\partial B} {\partial t} = 0 \\\]
+
+\[\nabla.E = \rho \\
+\nabla\times B - \frac{\partial E}{\partial t} = \bar{j}\]
+
+\[dF = 0 \\\]
+
+\[*d*F =0\]
+
+<h2 id="chapter-2---manifolds">Chapter 2 - Manifolds</h2>
+
+<hr />
+
+<ol>
+  <li>Topological space is a set X together with a family of subsets of X, called the <strong>open sets</strong>, required to satisfy conditions:
+    <ul>
+      <li>The empty set and X itself are open,</li>
+      <li>If $U,V \subseteq X$ are open, so is $U\cap V$,</li>
+      <li>If the sets $U_\alpha \subseteq X$ are open, so is the union $\bigcup U_\alpha$.</li>
+    </ul>
+  </li>
+  <li>An open set contain a point $x \in X$ is called a <strong>neighborhood</strong> of x.</li>
+  <li>The complement of an open set is called <strong>closed</strong>.</li>
+  <li>A function $f:X \rightarrow Y$ between topological spaces is defined to be <strong>continuous</strong> if, given any open set $U \subseteq Y$, the inverse image $f^{-1}U \subseteq X$ is open.</li>
+  <li>A collection $U_\alpha$ of open sets <strong>covers</strong> a topological space X if their union is all of X.</li>
+  <li>Given a topological space X and an open set $U \subseteq X$, we define a <strong>chart</strong> to be a continuous function $\varphi:U\rightarrow\mathbb{R}^n$ with a continuous inverse viz. a <em>homeomorphism</em>.</li>
+  <li>An <strong>n-dimensional manifold</strong>  is a topological space M equipped with charts $\varphi_\alpha:U\rightarrow \mathbb{R}^n$, where $U_\alpha$ are open sets covering M, such that the <strong>transition function</strong> $\varphi_\alpha\circ\varphi^{-1}_\beta$ is smooth wherever it is defined. Such a collection is called <strong>atlas</strong>.</li>
+  <li>A function $f:M \rightarrow \mathbb{R}$ is <strong>smooth</strong> if for all $\alpha$, $f\circ\varphi_\alpha^{-1}:\mathbb{R}^n \rightarrow \mathbb{R}$ is smooth. (Well defined, since the transition functions are smooth).</li>
+  <li>Given a topological space X and a subset $S \subseteq X,$ define the <strong>induced topology</strong> on S to be the topology in which the open sets are of the form $U \cap S,$ where $U$ is open in $X.$</li>
+  <li><strong>**Given topological spaces X and Y, we can give $X \times Y$ 
+    1. the **product topology</strong> in which a set is open if and only if it is a union of sets of the form $U \times V$, where $U$ is open in $X$ and $V$  is open in Y. 
+    2. the <strong>disjoint union topology</strong>  in which a set is open if and only if it is the union of an open set of $X$ and an open subset of $Y$.</li>
+  <li>A topological space X is said to be <strong>compact</strong> if for every cover of X by open sets $U_\alpha$ there is a finite collection $U_{\alpha_1}, …, U_{\alpha_n}$ that covers X.</li>
+</ol>
+
+<h2 id="chapter-3---vector-fields">Chapter 3 - Vector Fields</h2>
+
+<hr />
+
+<h3 id="31-vector-fields">3.1 Vector Fields</h3>
+
+<ol>
+  <li>The set of smooth (real-valued) functions on a manifold $M$ is written <strong>$C^\infty(M)$</strong>.</li>
+  <li>$(C^\infty(M),+,.)$ is an <strong>algebra (ring)</strong> satisfying the following:
+    <ol>
+      <li>
+        <p>$(C^\infty(M),+)$ is an abelian group:</p>
+
+\[f + g = g + f \\
+ f + (g+h) = (f+g) + h\]
+      </li>
+      <li>
+        <p>The operations $+, .$ additionally obey: Associativity, Distributivity</p>
+
+\[f(gh) = (fg)h \\
+ f(g+h) = fg + gh \\
+ (f+g)h = fh + gh \\
+ 1f = f \\
+ \alpha(\beta f) = (\alpha\beta)f \\
+ \alpha(f+g) = \alpha f + \alpha g \\
+ (\alpha + \beta)f = \alpha f + \beta f\]
+      </li>
+      <li>
+        <p>Further, $C^\infty(M)$ has an <strong>identity element</strong> and is also <strong>commutative</strong> (w.r.t $.$ operation).</p>
+
+\[fg = gf\]
+
+        <p>$\forall f,g,h \in C^\infty(M)$ and  $\alpha,\beta \in \mathbb{R}$.</p>
+      </li>
+    </ol>
+  </li>
+  <li>A <strong>vector field $v$</strong> on $M$ is defined to be a function from $C^\infty(M)$ to $C^\infty(M)$ satisfying the following:
+    <ol>
+      <li>
+        <p><em>Linearity</em> over $\mathbb{R}$,</p>
+
+\[v(f+g) = v(f) + v(g) \\
+ v(\alpha f) = \alpha v(f) \\\]
+      </li>
+      <li>
+        <p>and <em>Leibnizarity</em> over $C^\infty(M)$.</p>
+
+\[v(fg) = v(f)g+ fv(g)\]
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>$Vect(M)$</strong> - the set of all vector fields is a <strong>$C^\infty(M)$-module</strong>, i.e. $(Vect(M),+)$ is an abelian group defined via</p>
+
+\[(v+w)(f) = v(f) + w(f) \\\]
+
+    <p>and module structure is defined using the following operation,</p>
+
+\[(gv)f = gv(f).\]
+
+    <p>where $g \in C^\infty(M)$.</p>
+
+    <p>And the defining properties of module structure are</p>
+
+\[f(v+w) = fv +fw \\
+ (f+g)v = fv+ gv \\
+ (fg)v = f(gv) \\
+ 1v = v\]
+  </li>
+  <li>Vector fields ${\partial_\mu}$ on $\mathbb{R}^n$ form a <strong>basis of $Vect(R^n)$</strong>.</li>
+</ol>
+
+<h3 id="32-tangent-vectors">3.2 Tangent Vectors</h3>
+
+<ol>
+  <li>
+    <p>We can define</p>
+
+\[v_p : C^\infty(M) \rightarrow \mathbb{R} \\
+ v_p(f) := v(f)(p)\]
+
+    <p>and think of <strong>$v_p$ as a tangent vector at p</strong>. We call $v_p$ as value of $v$ at $p$.</p>
+  </li>
+  <li>Define <strong>tangent vector at $p \in M$</strong> to be a function $C^\infty(M) \rightarrow \mathbb{R}$ satisfying <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">Linearity</a> over $\mathbb{R}$ and <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">Leibnizarity</a> over $C^\infty(M)$.</li>
+  <li>For each $p \in M$, a vector field $v \in Vect(M)$ determines a tangent vector $v_p \in T_pM$. And also every tangent vector at $p$ is of the form $v_p$ for some vector field or other.</li>
+  <li>
+    <p><strong>$T_pM$</strong> - the set of all tangent vectors at $p$ form an $\mathbb{R}$ - <strong>vector space</strong> where the operations are defined as follows</p>
+
+\[(v+w)(f) = v(f) + w(f) \\
+ (\alpha v)(f) = \alpha v (f)\]
+
+    <p>$\forall v,w \in T_pM$ and $\alpha \in \mathbb{R}$. [Set of all <em>derivations</em> form a vector space]. [].</p>
+  </li>
+  <li><strong>Curve ($\gamma(t)$)</strong> is a function from $\mathbb{R}$ or some interval of it to $M$ that is smooth, i.e. for any $f \in C^\infty(M),$ $f(\gamma(t))$ is smooth. [$\gamma : \mathbb{R} \rightarrow M$].</li>
+  <li><strong>Tangent vector to the curve at $\gamma(t)$</strong>, call it $\gamma’(t) \in T_{\gamma(t)}M$ is defined as $\frac{d}{dt}f(\gamma(t)$, i.e $\gamma’(t)$ differentiates the functions in the direction $\gamma$ is moving in at time $t$. [Also denoted by (physically) $\frac{d\gamma}{dt}$].</li>
+</ol>
+
+<h3 id="33-covariant-versus-contravariant">3.3 Covariant Versus Contravariant</h3>
+
+<p>Let $\phi: M \rightarrow N$ be a function from one manifold to another.</p>
+
+\[\phi:M \rightarrow N\]
+
+<ol>
+  <li>
+    <p>We can pullback $f:N \rightarrow R$ from $N$ to $M$ by $\phi$ as</p>
+
+\[\phi^*f = f\circ\phi : M \rightarrow R \\\]
+
+    <p>$\phi^<em>f$ is called the <strong>pullback of $f$ by</strong> $\phi$. [Such backward behaving functions are called <strong>Contravariant</strong>]. [Pulling back any map by $\phi : M \rightarrow N$ is an operation $\phi^</em>:C^\infty(N) \rightarrow C^\infty(M)$].</p>
+  </li>
+  <li>We say that $\phi$ is smooth if $f \in C^\infty(N) \implies \phi^*f \in C^\infty(M)$. We will call such functions <strong>maps.</strong></li>
+  <li>
+    <p>We can pushforward tangent vectors $v \in T_pM$ by $\phi$ as</p>
+
+\[\phi_*v(f) = v(\phi^*f)\]
+
+    <p>$\phi_*v(f)$ is called the <strong>pushforward of $v$ by $\phi$</strong>.</p>
+  </li>
+  <li>If $\gamma$  is a curve in $M$ with $\gamma’(t) \in T_{\gamma(t)}M$, the curve $\phi \circ\gamma$ is a curve with tangent vector</li>
+</ol>
+
+\[(\phi\circ\gamma)'(t) = \phi_*(\gamma'(t)) \in T_{\phi(p)}N.\]
+
+<h3 id="34-flows-and-lie-bracket">3.4 Flows and Lie Bracket</h3>
+
+<ol>
+  <li>A curve $\gamma$ starting from a point $p \in M$, i.e. $\gamma(0) = p$ and $\gamma’(t) = v_{\gamma(t)}$ for a vector field $v$, is  called the <strong>Integral curve through $p$ of the vector field $v$</strong>.</li>
+  <li>A vector field $v$ is <strong>integrable</strong> if all the integral curves are defined for all t.</li>
+  <li>
+    <p>Supposing $v$ is an integrable vector field,  Let $\phi_t(p)$ be the integral curve of $v$ through the point $p \in M.$ For each time $t$, the map $\phi_t : M \rightarrow M$ turns out to be smooth (by smooth dependence of solutions of differential equations on initial conditions). We call the family of maps ${\phi_t}$ the <strong>flow generated by $v$.</strong> And the defining equation for the flow is</p>
+
+\[\frac{d}{dt}\phi_t(p) = v_{\phi_t(p)}.\]
+  </li>
+  <li>
+    <p>The <strong>Lie bracket or commutator</strong> of vector fields $v,w \in Vect(M)$ is defined by</p>
+
+\[[v,w](f) = v(w(f)) - w(v(f)),\]
+
+    <p>$\forall f \in C^\infty(M)$. Or, for short, $[v,w] = vw - wv$. [This is another vector field viz. satisfies the linearity and leibnizarity all while eating and spitting functions on M].</p>
+  </li>
+  <li>The lie bracket has the following more properties:  (Bi-linearity and Jacobi identity)</li>
+</ol>
+
+\[[u,\alpha v + \beta w] = \alpha[u,v] + \beta[u,w] \\
+[u,[v,w]] + [v,[w,u]]+ [w,[u,v]] = 0\]
+
+<h2 id="chapter-4---differential-forms">Chapter 4 - Differential Forms</h2>
+
+<hr />
+
+<h3 id="41-1-forms">4.1 1-forms</h3>
+
+<ol>
+  <li>
+    <p>We define a <strong>1-form</strong> on any manifold $M$ to be a map from $Vect(M)$ to $C^\infty(M)$  that is linear over $C^\infty(M)$.  If $w$ is a 1-form, $g \in C^\infty(M)$ and $v, u \in Vect(M)$ then,</p>
+
+\[w(v+u) = w(v) + w(u) \\
+ w(gv) = gw(v)\]
+
+    <table>
+      <tbody>
+        <tr>
+          <td>[When in doubt, imagine $w = df$ or $\nabla f$</td>
+          <td>$df(v) = v(f)$]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>The 1-form $df$ has a special name - it’s called the <strong>differential of $f$</strong> or <strong>the exterior derivative of $f$</strong>.</li>
+  <li>
+    <p>$\Omega^1(M)$  - space of all 1-forms on a manifold M. This is a <strong>module over $C^\infty(M)$.</strong> Operations are given by</p>
+
+\[(w+\mu)(v) = w(v) + \mu(v) \\
+ (fw)(v) = fw(v)\]
+  </li>
+  <li>
+    <p>$df$ is a descendant of a more general operation on forms. The map $d:C^\infty(M) \rightarrow \Omega^1(M)$ that sends each function $f$ to its differential $df$ is called the <strong>differential</strong> or <strong>exterior derivative</strong>. The following properties hold true -  linearity and leibnizarity [making it deserving to call it a <em>derivative</em>]</p>
+
+\[d(f+g) = df + dg \\
+ d(\alpha f) = \alpha df\\
+ (f+g)dh = fdh + gdh \\
+ d(fg) = fdg + gdf\]
+  </li>
+  <li><strong>Example: $d\sin(x) = \cos(x)dx$!</strong> Check by acting on a general vector field - $v^\mu\partial_\mu$.</li>
+  <li>Suppose $f(x^1,…,x^n) \in C^\infty(\mathbb{R}^n)$, then $df = \partial_\mu f\ dx^\mu$!</li>
+  <li>
+    <p>In fact <strong>${dx^\mu}$ forms a basis for $\Omega^1(\mathbb{R}^n)$</strong>. The key being,</p>
+
+\[dx^\mu(\partial_\nu) = \partial_\nu x^\mu = \delta^\mu_\nu\]
+
+    <ul>
+      <li>If we have a 1-form $w$ on $R^n$, then we can define $w_\mu = w(\partial_\mu)$, such that</li>
+    </ul>
+  </li>
+</ol>
+
+\[w = w_\mu dx^\mu\]
+
+<h3 id="42-cotangent-vectors">4.2 Cotangent Vectors</h3>
+
+<ol>
+  <li>Given a manifold $M$ and a point $p \in M$, a <strong>cotangent vector</strong> $w$ at $p$ is defined to be a linear map from the tangent space $T_pM$ to $R$.</li>
+  <li>$T_p^*M$ - denotes the space of all cotangent vectors at $p.$
+    <ol>
+      <li>If $w$ is a 1-form on M, we can define a cotangent vector $w_p \in T^*_pM$ by saying that for any vector field $v$ on M,</li>
+    </ol>
+
+\[w_p(v_p) = w(v)(p).\]
+  </li>
+  <li>For any given vector space $V$, the dual vector space $V^<em>$ is defined to be the space of all linear functionals $w:V \rightarrow R$. $T_p^</em>M$ is dual to $T_pM$.</li>
+  <li>
+    <p>If we have a linear map from one vector space to another, $f: V \rightarrow W,$ we also have the <strong>dual map of $f$</strong> defined as follows,</p>
+
+\[f^*: W^* \rightarrow V^* \\
+ (f^*w)(v) := w(f(v)).\]
+
+    <p>where $w \in W^*, v \in V$.</p>
+
+    <p><em>[So dual maps are contravariant].</em></p>
+  </li>
+  <li>
+    <p>Thus, from the pushforward $\phi_* :T_pM \rightarrow T_pN$, we have the <em>pullback of cotangent vector</em> as follows</p>
+
+\[\phi^*:T^*_qN \rightarrow T^*_pM \\
+ (\phi^*w)(v) := w(\phi_*v)\]
+
+    <p>$\phi^*w$ is called the <strong>pullback of $w$ by $\phi$</strong>. [$\phi: M \rightarrow N$ ]</p>
+  </li>
+  <li>We can <strong>pullback 1-forms globally</strong> by defining $(\phi^<em>w)_p = \phi^</em>(w_q)$ for a given 1-form $w$ on N, where $\phi(p) = q$.</li>
+  <li>
+    <p>Exterior derivative is <strong>natural</strong> -</p>
+
+\[\phi^*(df) = d(\phi^*f)\]
+  </li>
+</ol>
+
+<h3 id="43-change-of-coordinates">4.3 (Change of) Coordinates</h3>
+
+<ol>
+  <li>Suppose $\varphi:U\subset M \rightarrow R^n$ and $x^\mu: R^n \rightarrow R$. We abuse the notation and write $x^\mu \equiv \varphi^*x^\mu = x^\mu\circ\varphi :U \rightarrow R \in C^\infty(M)$; i.e. we pull back the function $x^\mu \in C^\infty(R^n)$  onto $M$, and still write it as $x^\mu$ , known as the <strong>local coordinates on U.</strong></li>
+  <li>We push forward the basis vectors ${\partial_\mu}$ of $Vect(R^n)$  to (abuse again) ${\partial_\mu\ \equiv \varphi_*^{-1}\partial_\mu}$ as basis vectors of $Vect(M)$ using $\varphi^{-1}$. [Note that $\varphi$ is a diffeomorphism]. Thus <strong>the dimension of tangent space at every point is n</strong>.</li>
+  <li>Similarly we pull back the basis of 1-forms on $R^n$ to basis of 1-forms on M using $\varphi$, ${dx^\mu} \rightarrow {dx^\mu \equiv \phi^*dx^\mu}$ . Thus <strong>the dimension of cotangent space at every point is n</strong>.</li>
+  <li>
+    <p>Under change of coordinates, $x^\mu \rightarrow x’^\mu$: [Passive]</p>
+
+\[\partial_\mu' = \frac{\partial x^\nu}{\partial x'^\mu} \partial_\nu; \ \   v'^\mu = \frac{\partial x'^\mu}{\partial x^\nu}v^\nu\]
+
+\[dx'^\mu = \frac{\partial x'^\mu}{\partial x^\nu} dx^\nu; \ \   w'_\mu = \frac{\partial x^\nu}{\partial x'^\mu}w_\nu\]
+  </li>
+  <li>A <strong>passive</strong> coordinate transformation is a change of coordinate functions (on $R^n$ or on a chart) . [Not moving points of our space around, just changing the function we use to describe them].</li>
+  <li>An <strong>active</strong> coordinate transformation is just another name for a diffeomorphism $\phi: M\rightarrow M$.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">Pending</code></p>
+
+<h3 id="44-p-forms">4.4 p-forms</h3>
+
+<ol>
+  <li>
+    <p>The <strong>exterior algebra</strong> over $V$, denoted $\Lambda V$, is the <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">algebra</a> generated by V with the relations</p>
+
+\[v\wedge w = -w\wedge v\]
+
+    <p>$\forall v,w \in V$.</p>
+
+    <ul>
+      <li>Suppose $dim(V) = 3$, with basis $dx, dy, dz$. The algebra is generated as follows -</li>
+    </ul>
+
+\[1 \in \Lambda V \\
+ dx, dy, dz \in \Lambda V\\
+ dx\wedge dy, dx \wedge dz, dy \wedge dz \in \Lambda V \\
+ dx\wedge dy\wedge dz \in \Lambda V\]
+
+    <p>along with their linear combinations at each stage. [What about the $dx\wedge dy + dz$, does it belong to $\Lambda V$? ]</p>
+
+    <ul>
+      <li>All <strong>higher order wedge products vanish</strong> trivially due to anti-symmetry.</li>
+    </ul>
+  </li>
+  <li>
+    <p>If</p>
+
+\[v = v_xdx + v_ydy+ v_zdz \\
+ w = w_xdx + w_ydy+ w_zdz \\
+ u = u_xdx + u_ydy+ u_zdz\]
+
+    <p>then we have</p>
+
+\[v\wedge w = (v_xw_y-v_yw_x)dx\wedge dy + (v_yw_z-v_zw_y)dy\wedge dz+ (v_zw_x-v_xw_z)dz\wedge dx \\\]
+
+\[u\wedge v \wedge w = det\begin{pmatrix}u_x &amp; u_y &amp; u_z \\
+ v_x&amp; v_y&amp; v_z \\
+ w_x&amp; w_y&amp; w_z
+ \end{pmatrix} dx\wedge dy\wedge dz\]
+
+    <p>which just look like cross product and triple product of vectors!</p>
+  </li>
+  <li>For any vector space $V$ we define $\Lambda^p V$ to be the subspace of $\Lambda V$ consisting of linear combinations of p-fold products of vectors in $V.$  Elements of which are said to have <strong>degree</strong> $p$.
+    <ol>
+      <li><strong>$\Lambda^0 V$</strong> is by convention defined to be the field/ring over which the vector space/module is defined.</li>
+    </ol>
+  </li>
+  <li>A vector space $V$ is a <strong>direct sum</strong> of subspaces $L_1, …, L_n$ if every vector $v \in V$ can be uniquely  expressed as $v_1+…+v_n$ where $v_i \in L_i$. We m think of vectors in $V$ as n-tuples $(v_1,…,v_n)$ where $v_i \in L_i$.</li>
+  <li>Given vector spaces $V_1, …, V_n$, the <strong>direct sum $\oplus_{i=1}^{n}V_i$ :=  $V_1 \oplus …\oplus V_n$</strong> is defined as the vector space of all n-tuples $(v_1,…v_n)$  with $v_i \in V_i$, where addition and scalar multiplication are defined component wise.</li>
+  <li>$\Lambda V$ is the direct sum of subspaces $\Lambda^pV$, i.e. $\Lambda V = \oplus\Lambda^pV$, with $dim(\Lambda V) = 2^n$, if $dim(V) = n$. [What about the mixed form? Can we add 1-form and 2-form? Is it in the exterior algebra?]</li>
+  <li>
+    <p>Notice that the $dim(\Lambda^{dim(V)-1}V = dim(V)$. We define a linear map between these two to recognize the $dim(V)-1$ degree wedge product as a vector in $V$ itself. In 3-dimensions for example,</p>
+
+\[*: dx\wedge dy \mapsto dz \\
+ *: dy\wedge dz \mapsto dx \\
+ *: dz\wedge dx \mapsto dy\]
+
+    <ul>
+      <li>But this is <em>right hand</em> style definition, we could define it the other way too.</li>
+    </ul>
+  </li>
+  <li>
+    <p>We define the <strong>differential forms</strong> on $M$, denoted by $\Omega(M)$, to be the algebra generated by $\Omega^1(M)$ over $C^\infty(M)$ with the relations</p>
+
+\[w\wedge\mu = -\mu \wedge w\]
+
+    <p>for all $w, \mu \in \Omega^1(M).$ So, $\Omega(M)$ consists of linear combinations of wedge products of 1-forms with <em>functions</em> as coefficients.</p>
+  </li>
+  <li>We allow all <strong>locally finite</strong> linear combinations, that is, those for which every point p in M has a neighborhood where only finitely many terms are nonzero.</li>
+  <li>
+    <p>Elements that are linear combinations of product of p 1-forms are called p-forms, and we write the space of p-forms as $\Omega^p(M)$. We have</p>
+
+\[\Omega(M) = \oplus \Omega^p(M)\]
+  </li>
+  <li>
+    <p>For example, suppose $M = \mathbb{R}^n$. 
+The 0-forms are just functions $\in$ $C^\infty(M)$</p>
+
+\[f\]
+
+    <p>1-forms all look like</p>
+
+\[w_\mu dx^\mu\]
+
+    <p>where $w_\mu$ are functions.</p>
+
+    <p>2-forms all look like</p>
+
+\[\frac{1}{2}w_{\mu\nu}dx^\mu\wedge dx^\nu\]
+
+    <p>with $w_{\mu\nu} = -w_{\nu\mu}$.</p>
+
+    <p>3-forms all look like</p>
+
+\[\frac{1}{3!}w_{\mu\nu\lambda}dx^\mu\wedge dx^\nu \wedge dx^\lambda\]
+
+    <p>with $w_{\mu\nu\lambda}$ totally antisymmetric.</p>
+
+    <p>.</p>
+
+    <p>.</p>
+
+    <p>.</p>
+  </li>
+  <li>Given a vector space $V$, $\Lambda V$ is a <strong>graded commutative</strong> or <strong>supercommutative algebra</strong>, that is if $w \in \Lambda^pV$ and $\mu \in \Lambda^qV$, then</li>
+</ol>
+
+\[w\wedge \mu = (-1)^{pq}\mu\wedge w.\]
+
+<h3 id="45-the-exterior-derivative">4.5 The Exterior Derivative</h3>
+
+<hr />
+
+<ol>
+  <li>
+    <p>We define the <strong>exterior derivative</strong> or <strong>differential</strong> to be the unique set of maps</p>
+
+\[d:\Omega^p(M) \rightarrow \Omega^{p+1}(M)\]
+
+    <p>such that the following properties hold:</p>
+
+    <ul>
+      <li>$d:\Omega^0(M) \rightarrow \Omega^1(M)$  [ agrees with our <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">previous definition</a>].</li>
+      <li>$d(w+\mu) = dw + d\mu$ and $d(cw) = cdw$ for all $w,\mu \in \Omega(M)$, and $c \in \mathbb{R}$.</li>
+      <li>$d(w\wedge \mu) = dw \wedge\mu+(-1)^pw\wedge d\mu$ for all $w \in \Omega^p(M)$ and $\mu \in \Omega(M)$.</li>
+      <li>$d(dw) = 0$ for all $w \in \Omega(M)$.</li>
+    </ul>
+  </li>
+  <li>On $\mathbb{R}^n$,
+    <ol>
+      <li>
+        <p>if $w$ is a 1-form then [<strong>curl!</strong>]</p>
+
+\[d(w_\mu dx^\mu) = \partial_\nu w_\mu dx^\nu\wedge dx^\mu\]
+      </li>
+      <li>
+        <p>if $w$ is a 2-form then [<strong>divergence!</strong>]</p>
+
+\[dw = (\partial_zw_{xy} + \partial_xw_{yz} + \partial_yw_{zx} ) dx\wedge dy \wedge dz\]
+      </li>
+    </ol>
+  </li>
+  <li>Special cases of exterior derivative -
+    <ol>
+      <li><strong>Gradient</strong> $d:\Omega^0(R^3) \rightarrow \Omega^1(R^3)$</li>
+      <li><strong>Curl $d:\Omega^1(R^3) \rightarrow \Omega^2(R^3)$</strong></li>
+      <li><strong>Divergence $d:\Omega^2(R^3) \rightarrow \Omega^3(R^3)$</strong></li>
+    </ol>
+  </li>
+  <li>
+    <p>Let I stand for <strong>multi-index</strong> that is a $p$-tuple $(i_1,…,i_p)$ of distinct integers between $1$ and $n$. Let $dx^I$ stand for the $p$-form $dx^{i_1}\wedge…\wedge dx^{i_p}$, then any p-form on $R^n$ can be written as</p>
+
+\[w = w_Idx^I\]
+
+    <p>then we have $dw = dw_Idx^I$ which can be written as</p>
+
+\[dw = (\partial_\mu w_I)dx^\mu\wedge dx^I\]
+  </li>
+  <li>
+    <p>Exterior derivative is <strong>natural</strong> -</p>
+
+\[\phi^*(dw) = d(\phi^*w).\]
+  </li>
+</ol>
+
+<h2 id="chapter-5---rewriting-maxwells-equations">Chapter 5 - Rewriting Maxwell’s Equations</h2>
+
+<hr />
+
+<h3 id="51-the-first-pair-of-equations">5.1 The First Pair of Equations</h3>
+
+\[\nabla.B = 0 \\
+\nabla\times E + \frac{\partial B} {\partial t} = 0 \\\]
+
+<ol>
+  <li>
+    <p>Static case: Treating E as a 1-form and B as a 2-form we have the maxwell equations as,</p>
+
+\[dE = 0, dB =0\]
+  </li>
+  <li>
+    <p>For the time-dependent case, define <strong>unified Electromagnetic field F</strong>, as a 2-form on  $\mathbb{R}^4$ the Minkowski spacetime.</p>
+
+\[F = B + E\wedge dt\]
+
+\[F = \frac{1}{2}F_{\mu\nu}dx^\mu \wedge dx^\nu\]
+
+    <p>with $F_{0i} = -E_i = -F_{i0}$ and $F_{ij} = B_k = -F_{ji}$.</p>
+  </li>
+  <li>
+    <p>The first pair of equations simply become,</p>
+  </li>
+</ol>
+
+\[dF=0.\]
+
+<ol>
+  <li>$dF = d_SB + (\partial_tB+d_SE)\wedge dt$.</li>
+  <li>Any 2-form $F$  on $\mathbb{R}\times S$ can be uniquely expressed as $B + E\wedge dt$ in such a way that for any local coordinates $x^i$ on $S$  we have $E=E_idx^i$ and $B= \frac{1}{2}B_{ij}dx^i\wedge dx^j$.</li>
+  <li>
+    <p>For any form $w$ on $\mathbb{R}\times S$ there is a unique way to write $dw = dt\wedge \partial_tw+d_Sw$ such that for any local coordinate $x^i$ on $S$, and writing $x^0 = t$, we have</p>
+
+\[d_Sw = \partial_iw_Idx^i\wedge dx^I, \\
+ dt\wedge\partial_tw = \partial_0w_Idx^0\wedge dx^I.\]
+
+    <p>where we have considered $w = w_Idx^I$.</p>
+  </li>
+  <li>
+    <p>Static Case</p>
+
+\[d_SB = 0, d_SE = 0\]
+  </li>
+  <li>General Case</li>
+</ol>
+
+\[d_SB = 0, \partial_tB+d_SE = 0.\]
+
+<h3 id="52-the-metric">5.2 The Metric</h3>
+
+<ol>
+  <li>
+    <p>Consider a <strong>Minkowski spacetime</strong>, and define the <strong>dot product</strong> as follows (in C = 1 units) [Note the sign convention!]</p>
+
+\[v\cdot w = -v^0w^0 + v^1w^1+v^2w^2 + v^3w^3\]
+
+    <p>then</p>
+
+    <ol>
+      <li>if $x \in V$ has $x\cdot x &gt;0$, $x$ is called <strong>spacelike.</strong>
+        <ul>
+          <li>It points more in space direction than the time direction.</li>
+          <li>If x is spacelike then $\sqrt{x\cdot x}$  represents the length of a straight ruler that stretches from the origin to x.</li>
+        </ul>
+      </li>
+      <li>if  $x\cdot x &lt; 0$, $x$ is called <strong>timelike.</strong>
+        <ul>
+          <li>It point more in time direction than the space direction.</li>
+          <li>If x is timelike then $\sqrt{x\cdot x}$ measures the time a clock would tick off as it moved from the origin to x in a straight line.</li>
+        </ul>
+      </li>
+      <li>if  $x\cdot x = 0$, $x$ is called <strong>null</strong> or <strong>lightlike.</strong>
+        <ul>
+          <li>It points equally in time and space directions.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>A <strong>semi-Riemannian metric</strong> (or just ‘metric’) on a vector space V is a map $g:V\times V \rightarrow R,$ that is
+    <ul>
+      <li><strong>bilinear,</strong> i.e. linear in each slot.</li>
+      <li><strong>Symmetric: $g(v,w ) = g(w,v).$</strong></li>
+      <li>and <strong>nondegenerate:</strong> if $g(v,w) =0 \forall w\in V,$ then $v = 0.$</li>
+    </ul>
+
+    <p>We define v is <strong>spacelike, timelike or null depending on the sign of $g(v,v)$.</strong></p>
+  </li>
+  <li>We say $v,w$ are <strong>orthogonal</strong> if $g(v,w) = 0.$  [<em>Null vectors are orthogonal to themselves</em>]!</li>
+  <li>Given a metric on $V$, we can always find an <strong>orthogonal basis</strong> for $V,$ that is, a basis ${e_\mu}$ such that $g(e_\mu,e_\nu) =0$ if $\mu \neq\nu$, and $\pm 1$ if $\mu = \nu$.</li>
+  <li>
+    <p>The <strong>signature</strong> of the metric $(p,q)$ indicates the number of $+1’s$ $(p)$ and $-1’s$ $(q)$. [<em>The numbers are independent of the choice of orthonormal basis</em>] !</p>
+
+    <p>Minkowski Spacetime has signature (3,1) with <strong>Minkowski metric</strong> given by</p>
+
+\[\eta(v,w) = -v^0w^0 + v^1w^1+v^2w^2 + v^3w^3\]
+  </li>
+  <li>
+    <p>A <strong>metric g</strong> on M assigns to each point $p\in M$ a metric $g_p$ on the tangent space $T_pM$, in a <strong>smoothly</strong> varying way.</p>
+
+    <p>By smoothly varying<strong>,</strong> we mean that if $v, w$ are smooth vector fields on $M$, the inner product $g_p(v,w)$ is a smooth function on $M$. We write this function simply as $g(v,w)$.</p>
+  </li>
+  <li>
+    <p>Smoothness condition $\implies$signature of $g_p$ is constant on any connected component of $M$!</p>
+
+    <p>[<em>This is interesting because, the function is assigned locally, at each point! Yet as we move along different points, not only does the basis change (which doesn’t effect the signature) the very metric function changes - but yet smoothness implies a constant signature! This is non-trivial!</em>]</p>
+  </li>
+  <li>By a <strong>semi-Riemannian manifold</strong> we mean a manifold equipped with a metric.</li>
+  <li>If the signature of $g$ is $(n,0)$ where $dim(M)$ = n, we say that $g$ is a <strong>Riemannian metric.</strong> Manifold equipped with such a metric is called a <em><strong>Riemannian manifold</strong>.</em></li>
+  <li>If the signature of $g$ is $(n-1,1)$ where $dim(M)$ = n, we say that $g$ is a <strong>Lorentzian</strong> <strong>metric.</strong> Manifold equipped with such a metric is called a <em><strong>Lorentzian manifold</strong>.</em></li>
+  <li>Easiest way to define a metric on 4-dim Lorentzian manifold M is to take 3-dim manifold $S$ with a Riemannian metric <strong>$^3g$</strong>, and let M be given by  $\mathbb{R}\times S$. Then we can define a Lorentzian Metric as,</li>
+</ol>
+
+\[g = -dt^2 +\ ^3g\]
+
+<ol>
+  <li>
+    <p>If $\gamma:[0,1] \rightarrow M$ is spacelike, that is if its tangent vector is everywhere spacelike, we define its <strong>arclength</strong> to be</p>
+
+\[\int_0^1\sqrt{g(\gamma'(t),\gamma'(t))} dt\]
+  </li>
+  <li>
+    <p>If $\gamma$  is timelike, we define the <strong>proper time along $\gamma$ -</strong> that is the time ticked off by a clock moving along $\gamma$ — to be</p>
+  </li>
+</ol>
+
+\[\int_0^1\sqrt{-g(\gamma'(t),\gamma'(t))} dt\]
+
+<ol>
+  <li>There is an isomorphism (one-one and onto) given by the linear functional $g(v,\cdot)$ between $V$ and $V^*$.  i.e $v \mapsto g(v,\cdot)$.</li>
+</ol>
+
+<p><strong>The language of Indices -</strong></p>
+
+<ol>
+  <li>In a chart, let $e_\mu$ be a basis of vector fields. We can define the <strong>components of the metric</strong> as follows - [$g_{\mu\nu}$  is an $n\times n$ matrix, if M is dim-n. Invertible because of non-degeneracy]</li>
+</ol>
+
+\[g_{\mu\nu} = g(e_\mu,e_\nu)\]
+
+<ol>
+  <li>$g^{\mu\nu}$ denotes the inverse matrix of $g_{\mu\nu}$.</li>
+  <li>Converting between vector fields and 1-forms:
+    <ol>
+      <li>[<strong>Lowering</strong>] Let $v = v^\mu e_\mu$ be a vector field on a chart. Then the corresponding 1-form $g(v,\cdot)$ is $v_\nu f^\nu$, where $f^\nu$ is the dual basis of 1-forms and $v_\nu = g_{\mu\nu}v^\mu$.</li>
+      <li>[<strong>Raising</strong>] Let $w = w_\mu f^\mu$ be a 1-form on a chart. Then the corresponding vector field is equal to $w^\nu e_\nu$, where $f^\nu$ is the dual basis of vector fields and $w^\nu = g^{\mu\nu}w_\mu$.</li>
+    </ol>
+  </li>
+  <li>$g^\mu_\nu = \delta^\mu_\nu$.</li>
+</ol>
+
+<p><strong>Extending the idea of metric to differential forms [</strong><em>i.e. not just 1-forms - between any p-forms and linear comb of them!</em><strong>]</strong></p>
+
+<ol>
+  <li>Let $M$ be a semi-Riemannian manifold. If $v,w$ are vector fields on $M$, $g(v,w)$ is a function on $M$ whose value at $p$ is $g_p(v,w)$. This is
+    <ol>
+      <li><strong>bilinear</strong>,</li>
+    </ol>
+
+\[g(fv+v',w) = fg(v,w)+g(v',w) \\
+ g(v,fw+w') = fg(v,w)+g(v,w'),\]
+
+    <p>where now $f \in C^\infty(M).$</p>
+
+    <p>b. <strong>symmetric,</strong></p>
+
+\[g(v,w) = g(w,v)\]
+
+    <p>c. <strong>nondegenerate,</strong></p>
+
+\[\forall w\in V g(v,w) = 0 \implies v = 0.\]
+  </li>
+  <li>
+    <p>Now, for 1-forms on $M$ - Given two 1-forms $w$  and $\mu$, we call the resulting function $\langle w,\mu \rangle,$ the <strong>inner product</strong> of $w$ and $\mu$. In terms of indices, if</p>
+
+\[g(v,w) = g_{\alpha\beta}v^\alpha w^\beta\]
+
+    <p>then for any 1-forms $w$ and $\mu$ we have</p>
+
+\[\langle w,\mu\rangle = g^{\alpha\beta}w_\alpha\mu_\beta.\]
+  </li>
+  <li>
+    <p>We define inner product of two p-forms $w$ and $\mu$ on M will be a function $\langle w,\mu\rangle$ on M, and bilinear - so just define between p-forms as -</p>
+
+\[\langle e^1\wedge...\wedge e^p,f^1\wedge...\wedge f^p\rangle = det[\langle e^i,f^j\rangle]\]
+
+    <p>where the RHS is the determinant of $p\times p$ matrix whose elements are $\langle e^i,f^j\rangle$.</p>
+  </li>
+  <li>The <strong>inner product of p-forms is nondegenerate</strong> supposing that $(e^1,…e^n)$ is any orthonormal basis of 1-forms in some chart with $g(e^i,e^i) = \epsilon (i)$, where $\epsilon(i) = \pm1$.</li>
+  <li>The p-fold wedge products $e^{i_1}\wedge…\wedge e^{i_p}$ form an orthonoraml basis of p-forms with</li>
+</ol>
+
+\[\langle e^{i_1}\wedge...\wedge e^{i_p},e^{i_1}\wedge...\wedge e^{i_p}\rangle = \epsilon(i_1)...\epsilon(i_p).\]
+
+<ol>
+  <li>The quantity $\frac{1}{2}\left(\langle E,E\rangle + \langle B,B\rangle\right)$ is called the <strong>Energy density</strong> of the Electromagnetic field.</li>
+  <li>The quantity $\frac{1}{2}\left(\langle E,E\rangle - \langle B,B\rangle\right)$ is called the <strong>Lagrangian</strong> for the vacuum Maxwell’s equations.</li>
+</ol>
+
+<h3 id="53-the-volume-form">5.3 The Volume Form</h3>
+
+<ol>
+  <li>Given an n-dimensional vector space $V$  with two bases ${e_\mu}$, ${f_\mu}$ <strong>there is always a unique linear transformation $T:V\rightarrow V$ taking one basis to the other:  $Te_\mu = f_\mu.$</strong> This is necessarily invertible and thus determinant is nonzero.
+    <ol>
+      <li>We say ${e_\mu} \&amp; {f_\mu}$  have <strong>same orientation</strong> if $det(T) &gt;0$ and <strong>opposite orientation</strong> if $det(T)&lt;0$.</li>
+    </ol>
+  </li>
+  <li>Define an <strong>orientation on $V$</strong> to be a choice of equivalence class of bases of V, where two bases are deemed equivalent if they have <em>the same orientation</em>. [There are always only two orientations on $V$.]</li>
+  <li>Define <strong>volume element</strong> associated to the basis ${e_\mu}$ as $e_1\wedge…\wedge e_n$ $\in \Lambda^nV$ , where $dim(V) = n$. [<em>A parallelopiped in n dimesnions</em>].</li>
+  <li>
+    <p>If ${f_\nu}$ is another basis of $V$ and $f_\nu = T^\mu_\nu e_\mu$, then [ <em>Volume element versus change of basis - there is a unique linear transformation T, see <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">[1]</a></em> ]</p>
+
+\[f_1\wedge...\wedge f_n = det(T)e_1\wedge...\wedge e_n.\]
+
+    <p><em>Thus two bases have the same orientation if the corresponding volume elements differ by a positive scalar multiple.</em></p>
+
+    <p>So, we can think of <em><strong>orientation as</strong> being a choice of a volume form modulo positive scalar multiples!</em></p>
+  </li>
+  <li>We define a <strong>volume form $w$</strong> on $M$ to be a nowhere vanishing n-form. Thus for each point $p \in M$, $w_p$ is a volume element on $T_p^*M$. The standard volume form on $R^n$ is</li>
+</ol>
+
+\[w = dx^1\wedge...\wedge dx^n.\]
+
+<ol>
+  <li>
+    <p>We say $M$ is <strong>orientable</strong>  if there exists a volume form on $M$.</p>
+
+    <p>[By <em>orientation on $M$</em>, **we mean a choice of equivalence class of volume forms on $M$, where two volume forms $w$ and $w’$ are equivalent if $w’ = fw$ for some positive function $f$].</p>
+  </li>
+  <li>Any volume form that is in the chosen equivalence class is said to be <strong>positively oriented</strong>; otherwise it is said to be <strong>negatively oriented</strong>.
+    <ul>
+      <li>[<em>Yes, it is possible to pick an equivalence class with all left handed bases and still call the elements in them positively oriented, cuz their volume forms are related by positive scalar multiple</em>].</li>
+    </ul>
+  </li>
+  <li>The <strong>Standard Orientation</strong> on $R^n$ is the equivalence class containing the volume form $dx^1\wedge…\wedge dx^n.$</li>
+  <li>
+    <p>Given an orientation on $M$, we can decide unambiguously where any basis $e^\mu$ of a cotangent space $T_p^*M$ is <strong>right-handed</strong> or <strong>left-handed</strong>, as follows -</p>
+
+    <p>Pick a volume form $w$ in the equivalence class, write $e^1\wedge…\wedge e^n$ as a constant (function) times $w$, and check to see whether the constant is positive or negative.</p>
+
+    <p>[<em>This is how orientation gives a global definition of right vs. left</em>]</p>
+
+    <p>[If I’m not wrong, We will say its right handed if it’s $e^\mu$  is positively oriented? ]</p>
+  </li>
+  <li>
+    <p>Any manifold equipped with an orientation is said to be <strong>oriented</strong>.</p>
+
+    <p>[<em>One can also think an oriented manifold as having ‘oriented charts’</em>].</p>
+  </li>
+  <li>Construction of a <strong>canonical volume form on</strong> $M$ given it is an oriented n-dimensional manifold with metric g.
+    <ul>
+      <li>Cover M with oriented charts $\varphi_\alpha:U_\alpha\rightarrow R^n$. In any chart set $g_{\mu\nu} = g(\partial_\mu,\partial_\nu)$, and define</li>
+    </ul>
+
+\[vol = \sqrt{\mid detg_{\mu\nu}\mid}dx^1\wedge...\wedge dx^n.\]
+
+    <ul>
+      <li>
+        <p>This is independent of the chart used! And thus gives a global existence of a volume form on all of $M.$</p>
+
+\[vol = \sqrt{\mid det\ g\mid}\ d^nx\]
+      </li>
+    </ul>
+  </li>
+  <li>We call $vol$  the <strong>volume form on $M$ associated to the metric g.</strong>
+    <ul>
+      <li>It is also common to write it as</li>
+      <li>For Minkowski space - $vol = \sqrt{- det\ g}\ d^nx$.</li>
+      <li>In general relativity, people often write it as $\sqrt{-g}\ d^nx$.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="54-the-hodge-star-operator">5.4 The Hodge Star Operator</h3>
+
+<ol>
+  <li>
+    <p>Let $M$ be an n-dimension oriented semi-Riemannian manifold. Then the inner product of two $p$ forms $w$ and  $\mu$ on $M$ is a function $\langle w,\mu\rangle$ on $M$. We define the <strong>Hodge Star Operator</strong></p>
+
+\[*:\Omega^p(M) \rightarrow \Omega^{n-p}(M)\]
+
+    <p>to be the unique linear map from $p$-forms to the $(n-p)$-forms such that for all $w,\mu \in \Omega^p(M)$</p>
+
+\[w\wedge *\mu = \langle w,\mu\rangle\ vol.\]
+
+    <p>[both the sides are n-forms! ]</p>
+  </li>
+  <li>We (often) call $*\mu$ the <strong>dual of $\mu$.</strong></li>
+  <li>
+    <p>The Hodge Star formula -</p>
+
+    <p>Suppose that $e^1,…e^n$ are positively oriented orthonormal basis pf 1-forms on some chart. Then for any <strong>distinct $1\le i_1,…,i_p\le n$,</strong></p>
+
+\[*(e^{i_1}\wedge...\wedge e^{i_p}) = \pm e^{i_{p+1}}\wedge...\wedge e^{i_n}\]
+
+    <p>where ${i_{p+1},…,i_n}$ consists of the integers from $1$ to $n$ not included in ${i_1,…,i_p}$:</p>
+
+\[\{i_{p+1},...,i_n\} = \{1,...n\} - \{i_1,...,i_p\}.\]
+
+    <p>The sign $\pm$ is given by</p>
+
+\[sign(i_1,...i_n)\epsilon(i_1)...\epsilon(i_p)\]
+
+    <p>where $sign(i_1,…i_n)$ denotes the sign of the permutation taking $(1,…,n)$ to $(i_1,…,i_n)$ and  $\epsilon(\mu) = \langle w,\mu\rangle = \pm1$.</p>
+  </li>
+  <li>Few properties of star operator through exercises.</li>
+</ol>
+
+<h3 id="55-the-second-pair-of-equations">5.5 The Second Pair of Equations</h3>
+
+<ol>
+  <li>
+    <p>The current density vector field is</p>
+
+\[\bar{J} = \rho\partial_0+j^1\partial_1+j^2\partial_2+j^3\partial_3\]
+  </li>
+</ol>
+
+<p>and converting it to a 1-form <a href="https://www.notion.so/Definitions-5cc8ea60d1574029ac57dd9da7b3bf79?pvs=21">using</a> Minkowski metric, we have</p>
+
+\[J = j -\rho dt\]
+
+<p>with</p>
+
+\[j = j_1dx^1+j_2dx^2+j_3dx^3.\]
+
+<ol>
+  <li>
+    <p>The second pair can thus be written as,</p>
+
+\[*d*F = J\]
+
+    <p>and the first pair was</p>
+
+\[dF = 0.\]
+  </li>
+  <li>The second pair is simply $<em>_Sd_S</em>_SE = \rho$ and $\partial_tE+ <em>_Sd_S</em>_SB = j$. Where $*_S$ is the Hodge star operator on  $R^3$ with a Euclidean metric.</li>
+  <li>
+    <p>Continuity Equation -</p>
+
+\[d*J = 0\]
+  </li>
+  <li>
+    <p>Vacuum Maxwell Equations</p>
+
+\[dF = 0, d*F = 0\]
+
+    <p>These are preserved by duality! $F \mapsto *F.$</p>
+  </li>
+  <li>$F = B + E\wedge dt, <em>F = *_SE-</em>_SB\wedge dt$. Duality $\implies$$B \mapsto <em>_SE$ and$E \mapsto -</em>_SB$.</li>
+  <li>On a 4-dimensional manifold -
+    <ul>
+      <li>equipped with a <em>Riemannian metric</em> $F \in \Omega^2(M)$ is called <strong>self-dual</strong> if $<em>F = F$, and <strong>anti-self-dual</strong>  if $</em>F=-F$. [$*^2 = 1$ for a Riemannian Metric].</li>
+      <li>equipped with Lorentzian metric $F\in \Omega^2(M)$ is called <strong>self-dual</strong> if $<em>F = iF$, and <strong>anti-self-dual</strong>  if $</em>F=-iF$. [$*^2 = -1$ for a Lorentzian Metric].</li>
+    </ul>
+
+    <p>[<em>In either case(self-dual or anti-self-dual of both Riemannian/Lorentzian case) one vacuum maxwell equation automatically gives another</em>]!</p>
+
+    <p>## <strong>The Maxwell Equations - Summary</strong></p>
+  </li>
+</ol>
+
+\[dF=0.\]
+
+\[d_SB = 0, \partial_tB+d_SE = 0.\]
+
+\[*d*F = J\]
+
+<p>$<em>_Sd_S</em>_SE = \rho <br />
+\partial_tE+ <em>_Sd_S</em>_SB = j$</p>
+
+\[d*J = 0\]
+
+<h2 id="chapter-6---derahm-theory-in-electromagnetism">Chapter 6 - DeRahm Theory in Electromagnetism</h2>
+
+<hr />
+
+<h3 id="61-closed-and-exact-1-forms">6.1 Closed and Exact 1-forms</h3>
+
+<ol>
+  <li>A differential form is called <strong>closed</strong> if its exterior derivative vanishes i.e. $w \mid dw = 0$.</li>
+  <li>A differential form is called <strong>exact</strong> if it is exterior derivative of some other differential form i.e. $w = d\mu$.</li>
+  <li>$d^2 = 0 \implies$<strong>All exact forms are closed!</strong></li>
+  <li>In physics we call a 0-form $\phi$ satisfying $E = -d\phi$ a <strong>scaler potential.</strong></li>
+  <li>And a 1-form $A$ satisfying $B = dA$ a <strong>vector potential.</strong> Similarly for the electromagnetic field $F$, $A$ is called a <strong>vector potential for $F$</strong> if $F = dA$.</li>
+  <li>A <strong>path $\gamma$</strong> in $S$ is a piecewise smooth map $\gamma:[0,T] \rightarrow S$.</li>
+  <li>We say two paths $\gamma_0,\gamma_1:[0,T] \rightarrow S$ from $p$ to $q$ are <strong>homotopic</strong> if there exists a smooth function $\gamma:[0,1]\times[0,T] \rightarrow S$ such that $\gamma(s,\cdot)$ is a path from $p$ to $q$ for each $s$, and</li>
+</ol>
+
+\[\gamma(0,t) = \gamma_0(t), \gamma(1,t) = \gamma_1(t)\]
+
+<ol>
+  <li>Given a connected manifold $S$, we say that $S$  is <strong>simply connected</strong> if any paths between two points $p,q$ are homotopic. <em>**</em></li>
+  <li>
+    <p><strong>Every closed 1-form on a simply connected manifold is exact!</strong> Given by following:</p>
+
+    <p>Given a 1-form $E$ on $S$, define  $\phi(q) = -\int_\gamma E = \int_0^T E_{\gamma{(t)}}(\gamma’(t))dt$ - Indeed this gives $E = -d\phi$.</p>
+  </li>
+  <li>A path $\gamma:[0,T] \rightarrow S$ is a <strong>loops</strong>  if it ends where it starts, that is, if $\gamma(0) = \gamma(T) = p$  for some point $p\in S$. We say that $\gamma$ is a loop <strong>based at $p$</strong>, or that $p$ is a <strong>basepoint</strong> of $\gamma$.</li>
+  <li>We say that a loop $\gamma:[0,T] \rightarrow S$ based at $p$ is <strong>contractible</strong> if it is homotopic to a constant loop $\eta$ that just stays at $p$ : $\eta(t) = p$ for all $t \in [0,T]$.</li>
+  <li>If $S$  is simply connected then if $dE = 0$, then $\int_\gamma E =0$ for <em>all</em> loops.</li>
+  <li>1-form $E$ is closed iff $\int_\gamma E = 0$  for <em>all contractible</em> loops. (A1)</li>
+  <li>1-form $E$ is exact iff $\int_\gamma E = 0$ for <em>all</em> loops. (A2)</li>
+</ol>
+
+<h3 id="62-stokes-theorem">6.2 Stokes’ Theorem</h3>
+
+<ol>
+  <li>In physics we call $\int_{\partial R} \bar{A}.\bar{n}$ the <strong>flux</strong> of $\bar{A}$ through the surface $\partial R$.</li>
+  <li>
+    <p>We define a <strong>n-dimensional manifold with boundary</strong> tp be topological space $M$ equipped with charts of the form $\varphi_\alpha:U_\alpha \rightarrow \mathbb{R}^n$ or $\varphi_\alpha:U_\alpha \rightarrow H^n$, where $U_\alpha$ are open sets covering $M$, such that the transition functions $\varphi_\alpha\circ\varphi_\beta^{-1}$ is smooth wherever it is defined. [Hausdorff and paracompact are assumed.]</p>
+
+\[H^n = \{(x^1,...x^n): x^n \ge 0\}\]
+  </li>
+  <li>A function on $H^n$ is <strong>smooth</strong> if it extend to a smooth function on the manifold ${(x^1,…,x^n): x^n &gt; -\epsilon}$ for some $\epsilon &gt; 0$.</li>
+  <li>
+    <p>We define the <strong>boundary of $M$</strong> to be the set of $p \in M$ such that some chart $\varphi_\alpha : U_\alpha \rightarrow H^n$ maps $p$ to a point in</p>
+
+\[\partial H^n =\{(x^1,...,x^n): x^n=0\}.\]
+
+    <p>We write $\partial M$ for the boundary of M.</p>
+  </li>
+  <li>We say a function $f:M \rightarrow \mathbb{R}$ is <strong>smooth</strong> if for any chart $\varphi_\alpha$, $f\circ\varphi_\alpha$ is smooth as function on $\mathbb{R}^n$ or $H^n$. 
+[<em>Similarly smooth maps, vector fields, differential forms, and so on are defined just as in the ‘without boundary’ case. Tangent space at a point on the boundary still turns out to be the same n-dimensional vector space.</em>]</li>
+  <li>
+    <p>Suppose $w$ is any $n$-form on $\mathbb{R}^n$. We can write $w = fdx^1\wedge…\wedge dx^n$. And thus we define on a chart with local coordinates $x^i$ -</p>
+
+\[\int_{\mathbb{R}^n}w = \int_{\mathbb{R}^n} fdx^1\wedge...\wedge dx^n,\]
+
+    <p>assuming the integral on right side converges. [This is coordinate independent! Orientation enters here]</p>
+  </li>
+  <li>On any manifold $M$, we define $\int_M w$ using <strong>partition of unity</strong> i.e. a collection of smooth functions ${f_\alpha}$ on $M$ such that:
+    <ul>
+      <li><strong>$f_\alpha$ is zero outside $U_\alpha$.</strong></li>
+      <li><strong>Any point $p \in M$ has an open set containing it on which only finitely many of the functions $f_\alpha$ are nonzero.</strong></li>
+      <li><strong>For any $p \in M$, $\sum_{\alpha}f_\alpha = 1$.</strong></li>
+    </ul>
+
+    <p>[Existence proof uses Hausdorff and Paracompact properties]</p>
+
+    <p>Using this we write $= \sum_\alpha f_\alpha w$ where $f_\alpha w$ vanishes outside $U_\alpha$. We may thus write $f_\alpha w = g_\alpha(x^1,…,x^n)dx^1\wedge…\wedge dx^n$ where $x^\mu$ are the local coordinates on $U_\alpha$, and the function $g_\alpha$ vanishes outside $U_\alpha$. We thus define</p>
+
+\[\int_M w = \sum_\alpha \int g_{\alpha}(x^1,...,x^n)dx^1\wedge...\wedge dx^n.\]
+
+    <p>[This is independent of choice of charts and partition of unity!]</p>
+  </li>
+  <li>$\partial M$ is an oriented manifold of dimension ($n-1$), where $dim(M) = n$.</li>
+  <li>
+    <p><strong>Stokes’ Theorem</strong> - Let $M$ be a compact oriented $n$-manifold with boundary and let $w$ be an $(n-1)$-form on $M$. Then</p>
+
+\[\int_M dw = \int_{\partial M}w.\]
+
+    <p>[Alternatively, we can work with a compact subset of M outside which $w$ vanishes.]</p>
+  </li>
+  <li>Given a subset $S$ of an n-manifold $M$, we say that $S$ is a <strong>k-dimensional submanifold of $M$</strong> if for each point $p \in S$ there is an open set $U$ of $M$ containing $p$ and a chart $\varphi: U \rightarrow \mathbb{R}^n$ such that $S\cap U = \varphi^{-1}\mathbb{R}^k$.
+[If for some points $p \in S$, $S\cap U = \varphi^{-1}H^k$, then we call it a <strong>submanifold with boundary of $M$.</strong> ]</li>
+  <li>If $N$ is a manifold (possibly with boundary) and $\phi:N\rightarrow M$ is a smooth map such that $\phi(N)$ is a submanifold of $M$ (possibly with boundary), we say $\phi$ is an <strong>embedding</strong> of $N$ in $M$, and we say N is <strong>embedded</strong> in $M$.</li>
+</ol>
+
+<h3 id="63-derahm-cohomology">6.3 DeRahm Cohomology</h3>
+
+<ol>
+  <li>$Z^p(M)$ - set of closed p-forms on M.</li>
+  <li>$B^p(M)$ - set of exact p-forms on M. [$B^p(M) \subset Z^p(M)$]</li>
+  <li>$H^p(M) = Z^p(M)/B^p(M)$ is called the <strong>pth deRahm cohomology group</strong> of  <em>**</em>$M$.</li>
+  <li>An element of $H^p(M)$ is a equivalence class of closed p-forms, where two closed forms $w,w’$  are equivalent if they differ by an exact p-form: $w -w’ = d\mu$.</li>
+  <li>
+    <p>When $w$ and $w’$ are equivalent in this way we say they are <strong>cohomologous</strong>, and we call the equivalence class of $w$ its cohomology class:</p>
+
+\[[w] = \{w':\exists\mu \ w - w' = d\mu\}.\]
+  </li>
+  <li>A function is <strong>locally constant</strong> if all of its partial derivatives vanish.</li>
+  <li>
+    <p>Suppose $w = d\mu$ is an exact p-form on M. Then for every compact p-dimensional manifold $S$ and map $\phi:S\rightarrow M$, we have $\int_S \phi^*w =0$ by the facts - $S$ has no boundary, d is natural and stokes’ theorem.</p>
+
+    <p>[So find a compact orinetable p-dim (sub) manifolf of M S with $\int_Sw \ne 0,$ and conclude that $w$ is not exact.]</p>
+  </li>
+  <li>[Remarkable Converse] If $\int_S \phi^* = 0$ for evevry map $\phi:S\rightarrow M$ of a p-dimensional manifold $S$ to $M$, then $w$ is exact.</li>
+</ol>
+
+<h3 id="64-gauge-freedom">6.4 Gauge Freedom</h3>
+
+<ol>
+  <li>We can change $A$ to $A + df$ for any function f without changing $B$. This way of changing A is called <strong>Gauge Transformation</strong>. The freedom in choosing A is called <strong>Gauge Freedom</strong>.</li>
+  <li>
+    <p>In terms of vector potential A of F, the Maxwell Equations reduce to</p>
+
+\[dF = 0; *d*dA = J\]
+  </li>
+  <li>Using the freedom we can choose the vector potential to satisfy additional conditions - choosing such condition - <strong>choosing a gauge.</strong></li>
+  <li>$A(\partial_t)$ - <strong>temporal gauge.</strong> [There exists such a gauge transformation!]</li>
+  <li>
+    <p>In temporal gauge, written in <strong>Cauchy Data</strong> <strong>(A,E)</strong> - the first pair of Maxwell equations become tautologies… and the second pair is</p>
+
+\[*_Sd_S*_SE = \rho, -\partial_tE + *_Sd_S*_SB =j\]
+
+    <p>First equation is the <strong>Gauss Law</strong> and the second equation together with $\partial_t A = E$  is an <strong>evolutionary equation</strong> of Cauchy data.</p>
+
+    <p>These two along with the continuity equation imply the Gauss law at later times - “<strong>Gauss Law us preserved by time evolution</strong>”.</p>
+  </li>
+</ol>
+
+<h3 id="65-bohm-aharonov-effect">6.5 Bohm-Aharonov Effect</h3>
+
+<p>-</p>
+
+<h3 id="66-wormholes">6.6 Wormholes</h3>
+
+<p>-</p>
+
+<h3 id="67-monopoles">6.7 Monopoles</h3>
+
+<p>-</p>
+
+<h1 id="part-ii-gauge-fields">Part II Gauge Fields</h1>
+
+<hr />
+
+<h2 id="chapter-7---symmetry">Chapter 7 - Symmetry</h2>
+
+<hr />
+
+<h3 id="lie-groups">Lie Groups</h3>
+
+<ol>
+  <li>We define a <strong>group</strong>  G to be a set equipped with a binary operation $\cdot: G\times G\rightarrow G$, often called the product, an operation $^{-1}:G\rightarrow G$, called the <strong>inverse,</strong> and a special element $1 \in G$, called the <strong>identity</strong>, such that for all $g,h,k \in G$ we have
+    <ol>
+      <li>$(g\cdot h)\cdot k = g\cdot(h\cdot k).$</li>
+      <li>$g\cdot1 = 1\cdot g = g.$</li>
+      <li>$g\cdot g^{-1} = g^{-1}\cdot g$ = 1.</li>
+    </ol>
+  </li>
+  <li>A <strong>subgroup</strong> of a group is a subset closed under multiplication and inverse, and containing the identity.</li>
+  <li><strong>Matrix Groups:</strong>
+    <ol>
+      <li>The group of all invertible $n\times n$ matrices with real entries is called the <strong>general linear group $GL(n,\mathbb{R})$.</strong></li>
+      <li>Complex Entries - $GL(n,\mathbb{C})$.</li>
+      <li>The <strong>special linear group</strong> is the set of matrices with determinant 1 -
+        <ol>
+          <li>$SL(n,\mathbb{R})$.</li>
+          <li>$SL(n,\mathbb{C})$.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>We define <strong>orthogonal group $O(p,q)$</strong> to be the set of $n\times n$ real matrices $T$ that preserve metric $g$ with signature $(p,q)$ that is,  $g(Tv,Tw) = g(v,w)$ for all $v,w \in \mathbb{R}^n$. The <strong>special orthogonal group $SO(p,q)$</strong>, is the set of matrices in $O(p,q)$ that also have determinant 1.</li>
+  <li>$SO(3,1)$ - <strong>Lorentz Group</strong>.</li>
+  <li><strong>Poincare group</strong> - The group of symmetries of Minkowski Space, that is, the group of all diffeomorphisms of Minkowski space that is, the group of all diffeomorphism of Minkowski space that preserve spacetime intervals!</li>
+  <li><strong>Unitary group $U(n)$</strong> consists of all unitary $n\times n$ complex matrices, that is, those that preserve the usual inner product on $\mathbb{C}^n$ given by $\sum_{i=1}^n\bar{v}^iw^i$. $SU(n)$ denotes the <strong>special unitary group</strong>, denotes the subgroup of $U(n)$ consisting of matrices that have determinant 1.</li>
+  <li>We say a group  $G$ is a <strong>Lie Group</strong> if it is a manifold, and the product and inverse operations $\cdot : G\times G \rightarrow G$ and $^{-1}:G \rightarrow G$ are smooth maps.</li>
+  <li>Given a Lie group $G$, define its <strong>identity component $G_0$</strong> to be the connected component containing the identity element.</li>
+  <li>Given two group $G$ and $H$ , we say a function $\rho:G \rightarrow H$ is a <strong>homomorphism</strong> if $\rho(gh) = \rho(g)\rho(h)$.</li>
+  <li>A homomorphism that is one-to-one and onto is called an <strong>isomorphism</strong>.</li>
+  <li>In physics an element of $U(1)$ is called a <strong>phase</strong>.</li>
+  <li>We say a group $G$  <strong>acts</strong> on a vector space $V$ if there is a map $\rho$ from $G$ to linear transformations of $V$ such that $\rho(gh)v = \rho(g)\rho(h)v$ for all $v\in V$. We also say that $\rho$  is a <strong>representation</strong> of $G$ on V.</li>
+  <li>We define <strong>general linear group $GL(V)$</strong> to be the group of all invertible linear transformations of $V$. A representation of $G$ on $V$ is nothing but a homomorphism $\rho:G\rightarrow GL(V)$.</li>
+  <li>We say that a group $G$ is <strong>abelian</strong> if $gh = hg$ for all $g,h \in G.$</li>
+</ol>
+
+            </div>
+        </section>
+        <figure class="blog-divider">
+            <img src="/src/images/divider1.png" alt="">
+        </figure>
+    </main>
+
+    <footer id="footer">
+        <div class="message">
+            Art $\times$ Science
+        </div>
+        <div class="contact">
+            p.shubhang-sharma@tuta.io
+        </div>
+        <img src="src/vector/warp-science-bg.png" id="warp-grid" alt="Image credits: iStock">
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <!-- <script src="gsap.min.js"></script> -->
+    <script src="/src/js/farm-scroll.js"></script>
+
+</body>
+
+
+</html>

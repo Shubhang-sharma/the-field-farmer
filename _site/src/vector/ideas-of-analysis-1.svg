@@ -1,0 +1,49 @@
+<svg width="1800mm" height="297mm" version="1.1" viewBox="0 0 1800 297"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="linearGradient2" x1=".28676" x2="1725.7" y1="145.07" y2="145.07" gradientTransform="translate(21.167)" gradientUnits="userSpaceOnUse">
+            <stop style="stop-color:#9628a0;stop-opacity:0" offset="0"/>
+            <stop style="stop-color:#8f269e;stop-opacity:.71765" offset=".063942"/>
+            <stop style="stop-color:#38138f;stop-opacity:.66101" offset=".1566"/>
+            <stop style="stop-color:#5a0cb2;stop-opacity:.78824" offset=".41792"/>
+            <stop style="stop-color:#99f410;stop-opacity:.82267" offset=".73467"/>
+        </linearGradient>
+    </defs>
+    <path class="markers" d="m326.17 145.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m457.93 127.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m590.22 145.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m711.93 127.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m854.81 145.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m1024.1 127.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m1235.8 145.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m1410.4 127.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <path class="markers" d="m151.54 127.43v17.636" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;stroke:#222"/>
+    <text class="labels" id="naturals" x="123.67516" y="112.63811" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="123.67516" y="112.63811" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Naturals</tspan>
+    </text>
+    <text class="labels" id="integers" x="298.38916" y="192.03461" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="298.38916" y="192.03461" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Integers</tspan>
+    </text>
+    <text class="labels" id="asymmetries-functions" x="588.25812" y="192.08627" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;text-align:center;text-anchor:middle" xml:space="preserve">
+        <tspan x="588.25812" y="192.08627" style="fill:#190000;font-size:19.403px;stroke-width:2.5">(a)Symmetries of</tspan>
+        <tspan x="588.25812" y="211.48907" style="fill:#190000;font-size:19.403px;stroke-width:2.5"> a function</tspan>
+        <tspan x="588.25812" y="230.89188" style="fill:#190000;font-size:19.403px"/>
+    </text>
+    <text class="labels" id="reals-1" x="682.59912" y="109.83585" style="fill:#190000;font-family:'EB Garamond';font-size:15.875px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="682.59912" y="109.83585" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Reals I</tspan>
+    </text>
+    <text class="labels" id="reals-2" x="825.27063" y="192.49896" style="fill:#190000;font-family:'EB Garamond';font-size:15.875px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="825.27063" y="192.49896" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Reals II</tspan>
+    </text>
+    <text class="labels" id="reals-3" x="991.24951" y="111.24954" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="991.24951" y="111.24954" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Reals III</tspan>
+    </text>
+    <text class="labels" id="riemann-integrability" x="1153.0698" y="191.39717" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="1153.0698" y="191.39717" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Riemann Integrability</tspan>
+    </text>
+    <text class="labels" id="rationals" x="428.07892" y="107.54382" style="fill:#190000;font-family:'EB Garamond';font-size:19.403px;font-style:italic;line-height:1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5" xml:space="preserve">
+        <tspan x="428.07892" y="107.54382" style="fill:#190000;font-size:19.403px;stroke-width:2.5">Rationals</tspan>
+    </text>
+    <path id="main-line" d="m21.469 145.07h1700.3" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:20;stroke:url(#linearGradient2)"/>
+</svg>

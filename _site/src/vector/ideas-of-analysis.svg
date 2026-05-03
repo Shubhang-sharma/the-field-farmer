@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1800mm"
+   height="297mm"
+   viewBox="0 0 1800 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="ideas-of-analysis.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.17836816"
+     inkscape:cx="1157.7178"
+     inkscape:cy="877.39874"
+     inkscape:window-width="1536"
+     inkscape:window-height="804"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showguides="true">
+    <sodipodi:guide
+       position="356.60187,183.16898"
+       orientation="0,-1"
+       id="guide30"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="382.15259,103.32625"
+       orientation="0,-1"
+       id="guide31"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#9628a0;stop-opacity:0;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#8f269e;stop-opacity:0.71764706;"
+         offset="0.06394154"
+         id="stop30" />
+      <stop
+         style="stop-color:#38138f;stop-opacity:0.66100919;"
+         offset="0.15660051"
+         id="stop3" />
+      <stop
+         style="stop-color:#5a0cb2;stop-opacity:0.78823529;"
+         offset="0.41791788"
+         id="stop4" />
+      <stop
+         style="stop-color:#99f410;stop-opacity:0.82267058;"
+         offset="0.73467463"
+         id="stop1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="0.28676471"
+       y1="145.06976"
+       x2="1725.6825"
+       y2="145.06976"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(21.166667)" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Markers">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 326.16755,145.42508 v 17.63635"
+       id="marker-2"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 457.9301,127.43342 v 17.63635"
+       id="marker-3"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 590.22185,145.42508 v 17.63635"
+       id="marker-4"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 711.93026,127.43342 v 17.63635"
+       id="marker-5"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 854.80535,145.42508 v 17.63635"
+       id="marker-6"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1024.1389,127.43342 v 17.63635"
+       id="marker-7"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1235.8069,145.42508 v 17.63635"
+       id="marker-8"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1410.433,127.43342 v 17.63635"
+       id="marker-9"
+       inkscape:label="markers" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#222222;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 151.54244,127.43342 v 17.63635"
+       id="marker-1"
+       inkscape:label="markers" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="123.67516"
+       y="112.63811"
+       id="naturals"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="123.67516"
+         y="112.63811">Naturals</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="298.38916"
+       y="192.03461"
+       id="integers"><tspan
+         sodipodi:role="line"
+         id="tspan13"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="298.38916"
+         y="192.03461">Integers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="588.25812"
+       y="192.08627"
+       id="asymmetries-functions"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="588.25812"
+         y="192.08627">(a)Symmetries of</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="588.25812"
+         y="211.48907"
+         id="tspan18"> a function</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="588.25812"
+         y="230.89188"
+         id="tspan17" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:15.875px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="682.59912"
+       y="109.83585"
+       id="reals-1"
+       inkscape:label="reals-1"><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;display:inline;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="682.59912"
+         y="109.83585"
+         id="tspan31">Reals I</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:15.875px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="825.27063"
+       y="192.49896"
+       id="reals-2"><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;display:inline;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="825.27063"
+         y="192.49896"
+         id="tspan25">Reals II</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="991.24951"
+       y="111.24954"
+       id="reals-3"><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="991.24951"
+         y="111.24954"
+         id="tspan28">Reals III</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="1153.0698"
+       y="191.39717"
+       id="riemann-integrability"><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="1153.0698"
+         y="191.39717"
+         id="tspan29">Riemann Integrability</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:19.4028px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';writing-mode:lr-tb;direction:ltr;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="428.07892"
+       y="107.54382"
+       id="rationals"
+       inkscape:label="rationals"><tspan
+         sodipodi:role="line"
+         style="font-size:19.4028px;fill:#190000;fill-opacity:1;stroke:none;stroke-width:2.5"
+         x="428.07892"
+         y="107.54382"
+         id="tspan34">Rationals</tspan></text>
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:url(#linearGradient2);stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 21.468616,145.06977 1700.278484,0"
+       id="main-line"
+       sodipodi:nodetypes="cc"
+       inkscape:label="main-line" />
+  </g>
+</svg>

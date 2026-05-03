@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/hstyles.css">
+    <link rel="stylesheet" href="/src/css/pstyles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <title>Shubhang Sharma</title>
+    <script>
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                // Notice the brackets around 'mathtools' below:
+                packages: { '[+]': ['mathtools'] },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-main">
+            <div class="name">SHUBHANG SHARMA.</div>
+            <div class="phi">
+                $\sum_i\varphi_i$
+            </div>
+            <div class="last-active">
+                ~ MAY 03.2026, HYDERABAD.
+            </div>
+        </div>
+        <nav>
+            <div class="link"><a href="/">HOME</a></div>
+            <div class="link"><a href="/academic.html">ACADEMIC</a></div>
+            <div class="link"><a href="/creative.html">CREATIVE</a></div>
+            <div class="link"><a href="/fieldfarm">MATH-PH</a></div>
+            <div class="link"><a href="/fieldnotes">FIELDNOTES</a></div>
+            <div class="link"><a href="/blog">BLOG</a></div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="page-container">
+            <div class="bg">
+                
+                
+                <h1 class="page-heading">Coloumb Potential ala Quantum Field Theory</h1>
+                
+                <!-- <img src="\assets\images\Bundle\fields.png"> -->
+
+<p><br /></p>
+
+<figure>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Unl1jXFnzgo?si=fxZ1tNZ9j7O4aRBq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+<figcaption>
+	<em>An absolute artistic banger. The <a href="https://www.behance.net/gallery/135701845/Theory-of-Everything-Illustrations-Quanta-Magazine">artist</a> behind.</em>
+</figcaption>
+</figure>
+
+<p>Having heard through many talks, books and notes that QFT aims to explain particle interactions at the very fundamental level, I waited eagerly to learn how QFT <em>derives</em> the coloumb potential viz. the non-relativistic interaction between two charged particles. If you haven’t yet, it’s truly worth watching <a href="https://www.youtube.com/watch?v=zNVQfWC_evg&amp;t=39s&amp;pp=ygUZcXVhbnR1bSBmaWVsZHMgZGF2aWQgdG9uZw%3D%3D">this</a> and <a href="https://www.youtube.com/watch?v=Unl1jXFnzgo&amp;t=48s&amp;pp=ygUfZGF2aWQgdG9uZyBxdWFudHVtIGZpZWxkIHRoZW9yeQ%3D%3D">this</a>.</p>
+
+<p>The goal of this article is to make the <em>derivation</em> of coloumb potential accessible to the curious minds and to pass the feels of Quantum Field theory by reproducing an infamous result! Hopefully I will also give a talk on this next semester.</p>
+
+<p><strong>Disclaimer</strong>: The statements won’t be (mathematically) precise.</p>
+
+<p><br /></p>
+
+<h2 id="1-the-notion-of-fields">1. The notion of <em>fields</em></h2>
+
+<p>We ditch the relativistic particle Quantum Mechanics and move to fields. This is a story of its own and hopefully there will be a blog coming soon on the beginnings of QFT. Here we state the tools, feel them and move on.</p>
+
+<h3 id="11-understanding-fields-in-n-levels">1.1 Understanding Fields in n-levels</h3>
+
+<ul>
+  <li>Fields are functions of space and time - $\phi(x,t)$</li>
+  <li>These are the dynamical variables of our new theory. They have infinite degrees of freedom.</li>
+  <li>Physically we are interested in the representations of Poincaré group on the space of fields. This will be cleared in the next section.</li>
+  <li></li>
+</ul>
+
+
+            </div>
+        </section>
+        <figure class="blog-divider">
+            <img src="/src/images/divider1.png" alt="">
+        </figure>
+    </main>
+
+    <footer id="footer">
+        <div class="message">
+            Art $\times$ Science
+        </div>
+        <div class="contact">
+            p.shubhang-sharma@tuta.io
+        </div>
+        <img src="src/vector/warp-science-bg.png" id="warp-grid" alt="Image credits: iStock">
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <!-- <script src="gsap.min.js"></script> -->
+    <script src="/src/js/farm-scroll.js"></script>
+
+</body>
+
+
+</html>

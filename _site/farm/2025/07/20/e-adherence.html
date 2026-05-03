@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/hstyles.css">
+    <link rel="stylesheet" href="/src/css/pstyles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <title>Shubhang Sharma</title>
+    <script>
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                // Notice the brackets around 'mathtools' below:
+                packages: { '[+]': ['mathtools'] },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-main">
+            <div class="name">SHUBHANG SHARMA.</div>
+            <div class="phi">
+                $\sum_i\varphi_i$
+            </div>
+            <div class="last-active">
+                ~ MAY 03.2026, HYDERABAD.
+            </div>
+        </div>
+        <nav>
+            <div class="link"><a href="/">HOME</a></div>
+            <div class="link"><a href="/academic.html">ACADEMIC</a></div>
+            <div class="link"><a href="/creative.html">CREATIVE</a></div>
+            <div class="link"><a href="/fieldfarm">MATH-PH</a></div>
+            <div class="link"><a href="/fieldnotes">FIELDNOTES</a></div>
+            <div class="link"><a href="/blog">BLOG</a></div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="page-container">
+            <div class="bg">
+                
+                
+                <h1 class="page-heading">Adherence-Limit Points</h1>
+                
+                <p>Terence Tao defines limit points the following way –</p>
+
+<p class="def"> Let $(a_n)_{n = m}^\infty$ be a sequence of real number, let $x$ be a rea l number, and let $\epsilon &gt;
+    0$ be real number. We say that $x$ is $\epsilon-adherent$ to $\left( a_n \right) _{n=m}^\infty$ iff there exists an
+    $n \ge m$ such that $a_n$ is $\epsilon-close$ to $x$. We say that $x$ is <i>continually</i> $\epsilon-adherent$ to
+    $\left( a_n \right) _{n = m}^\ infty$ iff it is $\epsilon-adherent$ to $\left( a_n \right) _{n=m}^\infty $ for every
+    $N \ge m.$ We say that $x$ is a limit point or adherent point of $\left( a_n \right) _{n=m}^\infty$ iff it is
+    continually $\epsilon-adherent$ to $\left( a_n \right) _{n=m}^\infty$ for every $\epsilon &gt; 0$.</p>
+
+<p>When I read this, there was something unsettling about it. It’s related to the property of $\epsilon$-adherence for all
+$\epsilon &gt; 0$. If such a property indeed holds, isn’t it continually adherent automatically? It was unsettling to know
+that for all $\epsilon &gt; 0$, there is eventually some $a_k$ which is $\epsilon$-close to $x$. But is it still not the
+case that, we can find such an $a_k$ for a given N, such that $k \ge N$? In my notes I wrote,</p>
+
+<blockquote>
+    But $\mathbb{R}$ is not countable. So isn't it the case that $\epsilon$-adherence for all $\epsilon &gt; 0$ is
+    equivalent to continual $\epsilon$-adherence?
+</blockquote>
+
+<p>Honestly, I am not able to go back to that unsettling intuition, perhaps because it has already settled? I am not able
+to
+justify the intuition I had to work towards proving the above fact. But nevertheless, I did and here’s a potential
+proof.</p>
+
+<p>Before we begin, let me at least describe the context which motivated this train of thought. I was proving the fact –
+if all the elements of a sequence are non-zero and converge to a non-zero real, then the sequence is bounded away from
+zero. There’s a simple way to prove this,</p>
+
+<p class="pf">Let $(b_n)_{n=m}^\infty$ be a sequence of real numbers such that $b_n \ne 0$, and let $y$ be the non-zero
+    real number it converges to. Then
+    there exists an $N \ge m$ such that for all $n \ge N$, $|a_n - y| \le |y|/2$. Thus, for all $n \ge N$, we have
+    $|y| \le |a_n - y| + |a_n|$ and thus $|a_n| \ge |y|/2 &gt; 0$. Hence, the sequence is bounded away from zero.</p>
+
+<p>But this is not how I approached at the beginning. I tried to assume on the contrary that the sequence is not bounded
+away from zero, i.e.</p>
+
+<p class="pf">for every $\epsilon &gt; 0$ (which fails to bound the sequence from below), there is an $n \ge 1$ such that
+    $|b_n| &lt; \epsilon$. We know that there is an $N \ge 1$ s.t. $|b_n - y| &lt; \epsilon$ for all $n \ge N$. There is
+        already a problem recipe in sight. There is always a $b_n$ arbitrarily close to $0$! But then, $b_n$ is
+        eventually, arbitrarily close to $y$. So is it unreasonable to expect that this means $y=0$? Or probing directly
+        the roots, is it unreasonable to ask whether it is even possible to have such a $|b_n| &lt; \epsilon$ for arbitrary
+        $\epsilon$ such that, it's always the case that $n &lt; N$? Doesn't this unsettlingly question the infiniteness of
+        reals (since $\epsilon \in \mathbb{R}$)? (And perhaps the countability?) If we indeed find a $k \ge N$ for all
+        $N \ge 1$ s.t. $|b_k| &lt; \epsilon$, then we immediately see that $|y| \le 2\epsilon$. We could have started with
+        $\epsilon=|y|/2$ and we see the contradiction. </p>
+
+<p>We now give the proof for the anticipated claim.</p>
+<p class="claim">$\epsilon$-adherence for all $\epsilon &gt; 0 \iff$ continually $\epsilon$-adherence for all
+$\epsilon &gt; 0$. Adherence for all $\epsilon$ is the crucial part of this result. Speaking for each
+$\epsilon$, continual adherence is of course stronger.</p>
+<p>The proof precisely speaks rigorously about the intuition I had, and it is as follows.</p>
+<p class="pf">There is an $\epsilon &gt; 0$ such that for some $N \ge 1$, $|a_n - x| &gt; \epsilon$ for all $n \ge N$. That
+is we assume on the contrary, $x$ is not continually $\epsilon$-adherent to $(a_n)_1^\infty$. Let $\epsilon' = min(|a_1 - x|, \ldots, |a_{N-1} - x|)$. Since $x$ is $\epsilon$ adherent, we have $|a_j - x| \le \epsilon$ for some $j \le N -1$. That is, $\epsilon' \le |a_j - x| \le \epsilon$. So, $\epsilon' \le \epsilon$. Then $\frac{\epsilon'}{M} &lt; \epsilon$ for all positive integers $M &gt; 1$. So, we have, $|a_i - x| \ge \epsilon' &gt; \frac{\epsilon'}{M} \forall i = 1, \ldots, N-1 $ and $  |a_i - x| &gt; \epsilon &gt; \frac{\epsilon'}{M} \forall i \ge N.$ That means, $x$ is not $\frac{\epsilon'}{M}$-adherent to $(a_n)_1^\infty$, and we arrive at a contradiction.</p>
+
+<p>What we saw is, $x$ must be continually adherent in order to be arbitrarily adherent. Otherwise, we will find a huge collection of reals for which it is not adherent. Basically  such a finite restriction ($N$) cannot accommodate to a very dense and arbitrary adherence! That’s the intuition we had, and we made it rigorous. The finiteness played a role in obtaining the contradiction by giving us the $\epsilon’$ (if it was infinite, then we wouldn’t know if it’s bounded)  which we used to bound the sequence from below and prevent the arbitrary-adherence!</p>
+
+            </div>
+        </section>
+        <figure class="blog-divider">
+            <img src="/src/images/divider1.png" alt="">
+        </figure>
+    </main>
+
+    <footer id="footer">
+        <div class="message">
+            Art $\times$ Science
+        </div>
+        <div class="contact">
+            p.shubhang-sharma@tuta.io
+        </div>
+        <img src="src/vector/warp-science-bg.png" id="warp-grid" alt="Image credits: iStock">
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <!-- <script src="gsap.min.js"></script> -->
+    <script src="/src/js/farm-scroll.js"></script>
+
+</body>
+
+
+</html>

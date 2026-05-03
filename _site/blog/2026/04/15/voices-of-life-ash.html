@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/hstyles.css">
+    <link rel="stylesheet" href="/src/css/pstyles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <title>Shubhang Sharma</title>
+    <script>
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                // Notice the brackets around 'mathtools' below:
+                packages: { '[+]': ['mathtools'] },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-main">
+            <div class="name">SHUBHANG SHARMA.</div>
+            <div class="phi">
+                $\sum_i\varphi_i$
+            </div>
+            <div class="last-active">
+                ~ MAY 03.2026, HYDERABAD.
+            </div>
+        </div>
+        <nav>
+            <div class="link"><a href="/">HOME</a></div>
+            <div class="link"><a href="/academic.html">ACADEMIC</a></div>
+            <div class="link"><a href="/creative.html">CREATIVE</a></div>
+            <div class="link"><a href="/fieldfarm">MATH-PH</a></div>
+            <div class="link"><a href="/fieldnotes">FIELDNOTES</a></div>
+            <div class="link"><a href="/blog">BLOG</a></div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="page-container">
+            <div class="bg">
+                
+                
+                <h1 class="page-heading">Voices of Life X Voice of Ash</h1>
+                
+                <div class="mid-rem">
+    <iframe data-testid="embed-iframe" style="margin-top: 50px;border-radius:12px" src="https://open.spotify.com/embed/playlist/1HLAYCb1nKzUHHeSdEJjOT?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<div class="mid-rem">
+    <img src="/src/images/voice-in-my-head.jpg" alt="" />
+    <div class="voice-1">
+        <audio id="v1" controls="" src="/src/media/VOICE-1.mp3" preload="auto"></audio>
+    </div>
+    <div class="voice-2">
+        <audio id="v2" controls="" src="/src/media/VOICE-2.mp3" preload="auto"></audio>
+    </div>
+    <div class="voice-3">
+        <audio id="v3" controls="" src="/src/media/VOICE-3.mp3" preload="auto"></audio>
+    </div>
+<iframe class="video-1" width="560" height="315" src="https://www.youtube.com/embed/_hiUO2aXfNE?start=50&amp;end=1200&amp;autoplay=1&amp;mute=1&amp;controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe>    <iframe class="video-2" width="560" height="315" src="https://www.youtube.com/embed/3VAGDpdtYOE?start=200&amp;end=296&amp;autoplay=1&amp;mute=1&amp;controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+
+</div>
+
+<div class="mid-rem">
+    <p>(Image from Freepik, Voices of <a style="color: rgba(168, 255, 46, 0.466);" href="https://theashfiles.substack.com/">Ash</a>)</p>
+</div>
+
+<style>
+
+    .video-1, .video-2 {
+        position: absolute;
+
+    }
+    .video-1 {
+        top: 14%;
+        left: -30%;
+        scale: 0.8;
+        border-radius: 20px;
+        mix-blend-mode:lighten;
+        opacity: 0.9;
+    }
+
+    .video-2 {
+        top: 54%;
+        right: -30%;
+        scale: 0.8;
+        border-radius: 20px;
+        mix-blend-mode: hard-light;
+        opacity: 0.8;
+    }
+
+    body {
+        background-color: #000;
+        background-image: url('/src/images/voice-in-my-head.jpg');
+        background-size: cover;
+    }
+
+    .header {
+        background-color: #00000000;
+    }
+
+    .bg {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        padding: 20px;
+
+    }
+
+    h1.page-heading {
+        max-width: 90rem;
+        color: antiquewhite;
+        mix-blend-mode: difference;
+        margin-inline: auto;
+    }
+
+    .left-rem {
+        max-width: 90rem;
+        display: block;
+        margin-left: 20px;
+        margin-right: auto;
+    }
+
+    .right-rem {
+        max-width: 90rem;
+        display: block;
+        margin-right: 20px;
+        margin-left: auto;
+    }
+
+
+    .mid-rem {
+        position: relative;
+        max-width: 90rem;
+        display: block;
+        margin-inline: auto;
+        p {
+            font-family: 'Roboto Mono';
+            color: rgba(255, 255, 255, 0.456);
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            margin-top: 100px;
+            display: block;
+            margin-inline: auto;
+            border-radius: 30px;
+        }
+    }
+
+    .blog-divider {
+        display: none;
+    }
+    .voice-1, .voice-2, .voice-3 {
+        position: absolute;
+        mix-blend-mode:difference ;
+    }
+    .voice-1 {
+        top: 10%;
+    }
+
+    .voice-2 {
+        top: 30%;
+        left: 80%;
+    }
+
+    .voice-3 {
+        top: 45%;
+    }
+
+
+    footer {
+        margin: 0;
+        background-color: #00000000;
+
+        #warp-grid {
+            display: none;
+        }
+
+        backdrop-filter: blur(2px);
+    }
+</style>
+
+
+            </div>
+        </section>
+        <figure class="blog-divider">
+            <img src="/src/images/divider1.png" alt="">
+        </figure>
+    </main>
+
+    <footer id="footer">
+        <div class="message">
+            Art $\times$ Science
+        </div>
+        <div class="contact">
+            p.shubhang-sharma@tuta.io
+        </div>
+        <img src="src/vector/warp-science-bg.png" id="warp-grid" alt="Image credits: iStock">
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <!-- <script src="gsap.min.js"></script> -->
+    <script src="/src/js/farm-scroll.js"></script>
+
+</body>
+
+
+</html>

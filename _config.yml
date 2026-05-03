@@ -1,0 +1,14 @@
+name: Shubhang
+title: Shubhang
+baseurl: /
+url: http://shubhang-sharma.github.io
+plugins:
+  - jekyll-toc
+toc:
+  min_level: 1
+  max_level: 6
+  list_class: "toc-list"  # Class for the <ul> element
+  sublist_class: "toc-sublist" # Class for nested <ul> elements
+  item_class: "toc-item" # Class for each <li> element
+  link_class: "toc-link" # Class for each <a> element
+

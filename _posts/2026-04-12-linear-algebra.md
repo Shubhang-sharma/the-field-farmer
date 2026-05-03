@@ -1,0 +1,87 @@
+---
+title: April, here we go
+layout: default
+tags: 
+categories: Blog
+---
+
+Ah, I am very embarrassed by my efforts to read basic math all these months. Of course, I have talked about it time and again throughout the last year. But it must do it, finish it. 
+
+
+## March x Analysis II
+
+The goal for the month of March was to finish Analysis II, excluding the non-essential chapters on *Lesbegue Measure & Integration*. I got slightly over ambitious in the middle and thought I could squeeze in those chapters too, but soon I sticked to the original plan. It turned out pretty great actually. I like how I included many intricacies of self-study (and my quirks) into that goal-setting. I got a realistic understanding of how I work, and how to make use of my quirks the best. So indeed, I finished Analysis II without the Lesbegue chapters! March was all about getting back to scholarly rut. February was all about JavaScript + WebDev rut. I realised I might as well put that monthly target for march as well and move linearly in that direction. No matter how non-linear my actual thoughts are, I like to work very linearly! So, it was important to stick to a single goal. 
+
+
+## March x Science Gallery Bengaluru 
+
+The thinking and the period around SGB application was also interesting. I paused my studies and went around to listen to the ideas around it. I listened Jahnavi Phalkey talk about a lot of these ideas. The way she talks is actually brilliant, it's such a connecting flow of thoughts! So I interacted with these narratives a lot, I thought about them, I figured my place in it, and I put my best foot forward. I might not have a liberal education in my arsenal, but I sure can interact with those ideas! I sure can step into those narratives! Although I first believed SGB Experimentor programme probably looks for people with more liberal backgrounds, I realised since it was part of a mentorship programme, training people to be part of liberal exchange in ideas is also important. So I saw my place in it. I knew I had a lot of thoughts, and a narrative in place in these directions... how my story revolves around these ideas and seeks a platform to nurture them! So yes, I put my best foot forward! And I know there are certain interactive aspects I need to practice, to bring out my curiosity and engagement with no restrictions, but I think I have a deep sense of what it means to be part of such a programme, and an excitement towards the mission! And I once again, think I put my best foot forward :). And I need an opportunity to get involved in these liberal ideas, beyond the linear narratives I have been part of for my entire life! I am so excited to let my exposure then to propagate through my future interests in academia or otherwise, and I think that's important!
+
+
+Also, I had some thoughts on art, abstraction and science, while going through a lot of conversations around them. Let me just note them before coming to the main subject of this blog.
+
+So, science often involves a rigorous abstraction. That abstraction often has a formal way to navigate, leading to development in science. But I think as humans, we are also wired to feel everything in another form of abstraction, a cultural abstraction rather than a rigorous one. And there are ways to put such an abstraction, in tangible forms perhaps, leading to what I might want to call, art or artistic mediums.
+
+I think from my own experiences, I can also note a sense of privilege that it takes to engage with art or artistic mediums to express that inherent cultural abstraction in every human. 
+
+
+On the other hand, I have this illustration in my mind about interaction between the cultural abstraction and rigorous abstractions... An interaction between Art and Science. Just some thoughts :).
+
+
+<img style="width: 80%;display: block;margin-inline: auto;" src="/src/vector/art-science-abstraction.png"/>
+
+
+I am curious about other forms of cultural abstraction. Cultural abstraction is essentially, let's say, a cultural conversation. Now that can happen without art, but more often than not, art allows everyone to connect to their inherent cultural abstraction. So that's the position of artistic media in the society I guess. Out of many other things, it is one way to go about bridging science with public. Interestingly, Science Gallery Bengaluru explores everything with so much diversity, in these directions. Throughout the exhibition season!
+
+Okay, so that was about a brief tangent towards SGB. Now, after the application, I resumed studying, and finally finished the goal! Yay!
+
+
+
+Now comes April, I had an interview for the SGB thing. I will talk about it some other time I guess. I want to, and may be in a separate blog. So the goal April is to finish the long due Linear Algebra study. 
+
+## Back to embarrassment
+
+It's honestly, very embarrassing to not having gone through a rigorous process of studying Linear Algebra during Master's! 
+
+I did courses in math, by skipping some elementary stuff. Sometimes because I read them on my own, sometimes because I hoped the exposure from physics would be enough to go ahead, and sometimes just picking those topics which were a lot closer to/applied to physics. Like Several Variable Calculus, Metric Spaces, Geometry and Curves and Surfaces, Differential Geometry. And oh, the course on Rings and Modules, where I bet on my very little exposure with Algebra (Groups and Linear Algebra) and went ahead just because the instructor was good. But *pura aukat bahar nikalgaya bhai* xd. And then a course on Differential Equations, credited just because I had to find a balance between bad teaching, pre-requisites, clashes in time-table! Honestly, I was interested to do any course in math, it's just had to be done with a lot of context, teaching, pre-requisites, relevance etc., because well, guess who decided to major in physics, without knowing anything about math! And guess who is now interested in math research rather than physics. 
+
+So, that's the context of my embarrassment. I just hope people note this context before judging me ;-;. About the thing where you can pick things up as you go, I don't think subjects like these as basic as algebra and analysis shouldn't be left to figuring as you go. They are everything. Before solving a problem, if you don't have enough thinking and doing exposure about them, the process becomes a lot slower and inefficient. There will be layers to crack, half of them not relevant to the subject at hand. I understood this very well during the course on manifolds. It went very well, and I was also able to perform good. But, those layers, it took so much of time, making things harder than they actually are, perhaps even limiting me from my own potential to think about differential geometry even further. I enjoyed the course a lot, and it was a clear realisation that if I want to become a competent math researcher, then I gotta have something more, a strong grasp of basics, not just a tangential, physicsy gyan. Again, the context has to include that I am more interested in making rigorous, abstract statements in math, not physics based, physics like arguments. (I do respect the arguments in physics. I have written about this more in my *Introduction to Mathematical Physics* blog.)
+
+
+So yeah. April is for Linear Algebra. It's already been 12 days in, I was occupied with stitching my own story around the SGB's narratives. It was an interesting process. To catchup with the human inside me, beyond my mathy interests, which involved cleaning up some of my previous writings in this site! Now, after taking a break yesterday, I am back at leaning into math. This post is a bridge to the scholarly mindset :).
+
+
+## Mental and Physical Health
+
+Break yesterday to breathe a little, and today I had my therapy session :). I am doing two 30 minute sessions per month, instead of a single 50 minute one. I think the frequency helps more than the time. Especially, now that I established some of my past in the sessions. I also tend to take more time in explaining, re-explaining things, going back to my spiral more I guess, in a longer session. So 30 minute duration will also make me more present. Let's see how it plays out.
+
+I liked today's session. I was able to open up more, and some perspectives started to emerge. Last week I had this feeling to set a direction to the therapy sessions. I updated my therapist about it and couple days ago, I also sent them my recent notes on the most important patterns I was struggling with. 
+
+Next session's on the 30th of April.
+
+And I had been trying to get back to running after a long break for the last two years. Before the surgery, I tried some strength training and volume training. But soon, my nose surgery was scheduled and I had to wait for three months before exercising properly. 
+
+Since January, I have been volume training again, mostly at Zone 2, with one speed session. I also continued strength training. Before I knew it, it was a month of consistent fun and there appears my first solid running injury(?). My knee started hurting after that trail mix run in March. Actually, I noted the early pain after my 8K earlier, after which I gave it sometime and ran the ~5K trail mix.
+
+So, I rested and rested, sticking to mostly walking and strength training. Two weeks in, I started to self-diagnose the pain, learning about muscle instabilities, compensations, and the general process of strength and conditioning. God, you can never know everything about something before you begin doing it seriously. It's alright I guess. 
+
+I want to blog this journey properly. I am learning a lot about the anatomy, gait, muscle instabilities, muscle strength, neuro-muscular training, compensations, and all of that stuff. It makes sense a lot. The book, *Anatomy for Runners* expands on all these, guiding the runners.
+
+I got a free Root Cause Analysis with a doctor (from Granimals!). May be I figure what's stressing my knee. From my research, it feels like patellar tendonitis or Hoffa's fat pad inflammation. Let's see what the doc says. I didn't expect a call with doctor actually. I thought I would be meeting a coach with some training in physio/rehab stuff. Apparently, it's a doctor with Master's in Sports Medicine(Orthopedics). I can't really afford doing much more than this, so I will work personally. The issue seems mostly about muscle imbalances, at hips, quads and probably even foot. So, if I educate myself about these, may be things workout.
+
+
+Anyway, exercises and running these days has mostly become about doing something controllable! In this phase of uncertainty, it helps, it drives me forward. Physical activity for me has always been about this silent mental strength boost. Currently, there's obstacles to even this, but strength training has been nice. I am trying to take more protein, through 4 eggs + 50gm Soya Chunks + Homemade Panner from 1L of skimmed milk regularly. 
+
+More about all of this in another blog.
+
+Ciao.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,252 @@
+.creative-heading {
+    border-radius: 15px;
+}
+
+.creative-container {
+    /* margin-top: 40px; */
+    position: relative;
+    max-width: 70rem;
+    margin: 0 auto;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    min-height: 100vh;
+    /* height: 80vh; */
+    /* border: 1px solid red; */
+}
+
+.creative-list {
+    position: relative;
+    /* margin-top: 10px; */
+    display: grid;
+    border-radius: 15px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    /* grid-auto-flow: column; */
+    min-height: 70vh;
+    /* transition: grid-area 1s ease; */
+    gap: 5px;
+}
+
+.creative-list canvas {
+    /* filter: blur(1px); */
+}
+.clist {
+    position: relative;
+    /* transition: transform 1s ease; */
+    /* border-bottom: 2px solid white; */
+    /* border-left: 1px solid white; */
+    border-radius: 18px;
+    /* background-color: #222; */
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    place-content: center;
+    align-items: center;
+    /* color: var(--yellow-green-accent); */
+    color: #ddd;
+    /* font-weight: bold; */
+    padding: 10px;
+    font-family: 'Satoshi', sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: 1.1em;
+    cursor: pointer;
+    z-index: 2;
+    transform-origin: top left;
+    will-change: transform;
+    overflow: hidden;
+    background-color: #222;
+    
+    /* Helps browser performance during the scale */
+
+    /* backdrop-filter: blur(5px); */
+
+    /* background: radial-gradient(#5228a0, #38138f 40%, #640bbc 100%); */
+    /* background: linear-gradient(to right, #5228a0 10%, #38138f 40%, #640bbc 100%); */
+}
+
+.clist:hover {
+    /* color: white; */
+}
+
+/* .clist:nth-child(4) {
+    border-radius: 0 20px 0 0;
+}
+.clist:last-child {
+    border-radius: 0 0 20px 0;
+} */
+
+/* 
+.point:last-child::before {
+    display: none;
+} */
+
+/* .clist::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 18px;
+    background-color: #d2d2d257;
+    width: 100%;
+    height: 100%;
+} */
+
+.p5:hover {
+    /* background-color: #ed225dAA; */
+}
+
+.cover-img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+
+.html:hover {
+    background-color: #f0652990;
+}
+
+.css:hover {
+    background-color: #2266CC90;
+}
+
+
+.js:hover {
+    background-color: #F7DF1E90;
+    color: #222;
+}
+
+.inkscape:hover {
+    background-color: #000000AA;
+    color: white;
+    font-size: 1.2em;
+    font-family: 'EB Garamond';
+    font-variant: small-caps;
+}
+
+.davinci-resolve {
+    /* color: rgba(17, 185, 204, 0.901); */
+}
+
+.davinci-resolve:hover {
+    background-color: rgba(17, 185, 204, 0.901);
+}
+
+.davinci-resolve::after {
+    /* background-color: #d2d2d22c; */
+}
+
+.cavalry {
+    overflow: hidden;
+    /* color: #11892fd4; */
+}
+
+
+.clist p {
+    z-index: 10;
+}
+
+video {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.davinci-resolve video {
+    scale: 1.8;
+}
+
+.cavalry::after {
+    /* background-color: #d2d2d22c; */
+}
+
+.cavalry:hover {
+    background-color: #4FFD7A90;
+}
+
+.photoshop:hover {
+    background-color: #0b2631AA;
+    color: #5cd0fa
+}
+
+.pr-pro:hover {
+    background-color: #330D3EAA;
+    color: #E298F2
+}
+
+.ae:hover {
+    background-color: #393665AA;
+    color: #CF96FD
+}
+
+.origami:hover {
+    background-color: #80000090;
+}
+
+.cooking:hover {
+    background-color: #96fa5c90;
+    color: #222;
+}
+
+.creative-expand {
+    grid-column: 1 / -1;
+    /* Spans all 4 columns */
+    grid-row: 1 / 4;
+    /* Spans 3 rows */
+    z-index: 10;
+    min-height: 600px;
+    cursor: zoom-out;
+}
+
+
+.item-hidden {
+    display: none !important;
+}
+
+/* The active item becomes a flex column */
+.creative-expand {
+    grid-column: 1 / -1;
+    /* Spans all columns */
+    grid-row: span 4;
+    /* Spans 4 rows (adjust as needed) */
+    cursor: default;
+
+    /* Flexbox magic to control the button placement */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    /* Gives some breathing room at the bottom */
+}
+
+/* The inline button */
+.explore-button-inline {
+    margin-top: auto;
+    /* This forces the button to the absolute bottom of the flex container */
+    align-self: center;
+    /* Centers the button horizontally */
+
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 100;
+    font-family: inherit;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.explore-button-inline:hover {
+    background: #333;
+    transform: scale(1.02);
+}

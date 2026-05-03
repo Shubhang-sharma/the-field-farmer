@@ -1,0 +1,212 @@
+---
+title: Reals
+layout: default
+tags: Analysis
+categories: Farm
+excerpt: "In the last article, we finished constructing rationals as a quotient between integers. We made sure to capture the equivalence between different quotients seen as pair of integers. We parted from mere counting and deficit to something more intricate. In particular, compared to integers, this allowed an extra operation on these numbers - namely reciprocals (and thus quotients). And there began a proliferation of numbers from Integers to Rationals. We saw there is a rational between every two rationals! This also made writing rationals into a *linear* order not so straightforward. We ended the article  mentioning -- although rationals are pretty wild and dense, numbers like $x$ such that $x^2 = 2$, are absent! But these numbers are very crucial starting from the very foundations of elementary geometry. "
+---
+
+ <span class="interest"><em>Hyping Rational to Real transition and Cauchy sequences.</em></span>
+
+
+
+In the last article, we finished constructing rationals as a quotient between integers. We made sure to capture the equivalence between different quotients seen as pair of integers. We parted from mere counting and deficit to something more intricate. In particular, compared to integers, this allowed an extra operation on these numbers - namely reciprocals (and thus quotients). And there began a proliferation of numbers from Integers to Rationals. We saw there is a rational between every two rationals! This also made writing rationals into a *linear* order not so straightforward. We ended the article  mentioning -- although rationals are pretty wild and dense, numbers like $x$ such that $x^2 = 2$, are absent! But these numbers are very crucial starting from the very foundations of elementary geometry. 
+
+For example, if we want a right angled triangle with two perpendicular sides of unit length -- the longer side is precisely the $x$ such that $x^2 = 2$. We will now start writing these in the familiar notation of $\sqrt{}$. So exponentiation puts a challenging ask to rationals. Rationals clearly exist beyond counting reasons, and through questions from geometry or otherwise, we end up with algebraic challenges on rationals. $\sqrt{2}$ was one such example. 
+
+(Note that, this series is based on a lot of emperical results we already know from our math education in schooling. The main mathematical goal of first three articles was to give a rigorous framework to those results. It thus involves a lot of example taking, learning, motivating and then theorizing -- like perhaps at any stage in mathematics regardless of beginning or advanced. And during the process of giving this rigorous framework for real numbers, we formally enter into the undergraduate mathematics -- because, there are new concepts that need to be defined and the whole structure of math starts to get more intricate and beautiful!)
+
+So, how can we obtain a number system which is more complete for a lot of geometric and algebraic needs? Let's note a basic fact.
+
+> The problem is basically found in algebraic expressions or polynomials involving various expoenents (and variables). One would like to have *solutions* to these algebraic expressions included in a (perhaps any) number system beyond counting. Atleast we want to aim towards such a number system.
+
+We know the story of course. It is possible to include a large class of such solutions into a number system called *Real Numbers*. But the story doesn't end there, we can expand this further to include ALL such solutions into a number system called *Complex Numbers*!
+
+As always, we are always in a tiny speck of vast sorroundings. Reals is still such a tiny speck. Yet there is plethora of analysis one can do with just these! All our elementary knowledge about numbers will thus end here as we start constructing Reals. We have laid a rigorous framework to understand all such elementary knowledge. We now start building and learning new and advanced knowledge of mathematics i.e. beyond high school. 
+
+
+We take a MUCH broader approach to fill the gaps we talked about. We build some concepts on top of rationals that will capture the wild behavior of rationals and pave way for completing them and thus defining the reals. It's a development that might have established after a myriad of trials and errors. And a justification for this in the light of our geometric/algebraic challenges on rationals feels non-trivial and would be a very interesting discussion, which we will postpone to the end of the article.
+
+Let's build the Reals!
+
+
+
+## A Rationals' approach. 
+
+Our first goal is to capture the fact that there are rationals which can be arbitrarily close to some number, as if approaching it and attaining it. Like the case of $x^2 < 2 < \left( x + \epsilon \right) ^2$ for any $\epsilon > 0.$ One can in principle take a collection of such numbers getting closer and closer in every extent  (rationally) possible to $\sqrt{2}$ We capture this notion through *sequences* and such an approaching behavior through *Cauchy sequences*.
+
+
+<div class="axiom">
+    A <em><b>sequence</b></em> $\left(a_n\right)_{n=m}^{\infty}$ of rational numbers is any funtion from the set $\left\{n\in \mathbb{Z} : n \ge m\right\}$  to $\mathbb{Q}$ . It's basically (informally) a collection of rational numbers, $a_m, a_{m+1}, a_{m+2}, \ldots.$ 
+</div>
+
+We will mostly work with $m = 0$ in this article. 
+
+- An informal example of a sequence: $2, 2.11, 2.18, 2.87, \ldots$ 
+- A rigorous example of a sequence: $\left((1/(n+1)\right)_{n=0}^{\infty} \sim 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots$.     
+
+We need to be more careful about such informal collections. How are we writing those numbers? Is it through a function or are you taking them from a set? Perhaps an infinite set? Can you (or how to) choose such a sequence of numbers? The answers to these questions is the content of the axioms of finite and infinite choice. We need to make such an axiom to consider such an informal representation actually rigorous. 
+
+But yeah, the crucial takeaway is that -- saying that a sequence $a_0, a_1, a_2, \ldots$ exists where each $a_i \in \mathbb{Q}$ without reference to an explicit map from $\mathbb{N} \to \mathbb{Q}$ assumes inherently that we can make an arbitrary choice of elements from an inifnite collection of sets (here all sets are $\mathbb{Q}$). That is choosing each $a_i$ from $\mathbb{Q}$. So we are inherently axiomatizing the intutitve fact that, <em>we can choose a sequence/tuple of elements from am inifnite collections of sets without refering to any procedure on how to choose.</em> Once you have a procedure to choose, everything is rigorous, but to say let's choose arbitrarily and proceed required admitting that it is an axiom. And this axiom was particularly important to prove the well-orderedness theorem for any set!
+
+Such a seemingly non-threatening axiom leads to some extremely wild results in the infinite case. 
+
+Making such notions rigorous allow us to work formally and let the language show us the way forward. For the finite case of axiom of choice, the wilderness is absent. That is there is nothing to loose and only to gain. Gain more specifically, concise proofs. Here, whenever we use an informal representation it will be only for passing the idea rather than using it to write the proofs. With axiom of infinite choice too, the proofs do tend to get concise significantly  and we will start using it only from the next article on infinite series! However as noted already, it is the nature of this axiom that, it comes with a baggage of some paradoxical results. The significance of this axiom along with all its baggage should hopefully appear in <a href="" target="_blank"><em>Wilderness of Axiom of Choice</em></a>. Veritasium made a nice video communicating these ideas. I hope to write a rigorous version of that! (Because, that's what I feel like doing - make a rigorous version of a communicated idea, and a communication version of a rigorous idea! That feels like a good way to understand math for me!)  
+
+Coming back to our discussion of rational sequences, we want to consider a class of sequences which appear to <em>converge</em>. Our plan is to then define real numbers as precisely those which these sequences seem to converge to. 
+
+<div class="axiom">
+A sequence $\left(a_n\right)_{0}^{\infty}$ of rational numbers is said to be a Cauchy sequence iff for every rational $\epsilon>0$, the sequence $\left( a_n \right) _{0}^{\infty}$ is everntually $\epsilon$-steady. By this we mean for every $\epsilon>0$ there exists a natural number $N$ such that $\forall n,m \ge N$ (N captures the eventual part), $d\left( a_n,a_m\right) \le \epsilon$ (the $\epsilon$-steady part).          
+</div>
+
+Intuitively, we want to consider sequences which are eventually arbitrarily closer to each other. These would be sequences like -- $\left( 1 /n \right)_{1}^{\infty}.$ This is because, for any $\epsilon > 0$, we have a natural $N > \frac{1}{\epsilon} \implies \frac{1}{N} < \epsilon.$ So, for any $i, j \ge  N$, we have,
+
+$$\left| \frac{1}{i} - \frac{1}{j}  \right|  \le \frac{1}{N} < \epsilon.$$ 
+
+One of the basic features of Cauchy sequences is that they are bounded.   
+<div class="proposition">
+    Every Cauchy sequence $\left( a_n \right) _ 0 ^\infty$ is bounded. That is, there is a rational  $M \ge 0$ such that $\left| a_n \right| \le  M$ $\forall n \ge 0.$    
+</div>
+
+<div class="proof">
+   Take $1 > 0$. Then there exists a natural $N \ge  0$ such that $\left| a_n - a_m\right| \le 1$ $\forall n,m\ge N.$ In particular, by triangular inequality, $\left| a_n \right| \le 1 + a_N ~ \forall n \ge N$, and by induction it's also  clear that $a_1,\ldots, a_{N-1}$ is also bounded. Thus $\left( a_n \right)_ 0 ^\infty$ is bounded.     
+</div>
+
+Again, motivated towards defining real numbers as a "limit" to these 
+sequences -- we need a notion of when two sequences are same. 
+
+This is precisely the growth of mathematics beyond the highschool. As pairs of integers, we knew immediately the equivalence condition on the formal quotients. Here we are developing the very abstract and auxilliary entity of a "limit". Apropri we do not have the tools to talk about it. We are in the middle of constructing both the bare bones of Reals and also the equivalence condition them. Such an equivalence condition is required since we can write different sequences seemingly converging to same entity. We now have seqeunces, and Cauchy sequences. It's time to define in what sense two cauchy sequences or more precisely their "limit" could be called equivalent.
+
+
+<div class="axiom">
+    Two sequences $\left( a_n \right) _ 0 ^\infty$ and $\left( b_n \right) _ 0 ^\infty$ are equivalent iff for each reational $\epsilon > 0$, they are eventually "$\epsilon$-close". By this, we mean -- for every rational $\epsilon > 0$ there exists an $N \ge 0$ (<em>eventual</em>) such that $\left| a_n - b_n \right| \le  \epsilon$ (<em>close</em>) for all $n \ge N.$  
+</div>
+
+An example of two equivalent Cauchy sequences would be,
+
+$$ a_n = 2 + \frac{1}{n} \text{ and } b_n = 2 - \frac{1}{n}.$$ 
+
+Both seemingly convergent towards $2.$ Our elementary mathematics also taught us how to calculate the square root of $2$ by hand in decimal representation. It is $1.4142...$. Define a sequence, $c_n = 1, 1.4, 1.41, 1.414, 1.4142,\ldots$ (we are being informal here). Then the following two sequences would be equivalent,
+
+$$ a_n = c_n - \frac{1}{n} \text{and } b_n = c_n + \frac{1}{n}.$$
+
+But ofcourse, $c_n$ is not defined rigorously here so everything is informal. But the idea is clear. There could multiple sequences which look like they converge to $\sqrt{2}$, and thus it is important for us to construct abstract concepts to identify them formally.
+
+We finally have both the construction material, and the glue to define the Reals.
+
+
+
+<video autoplay muted loop style="width:80%; display:block; margin: 0 auto;" >
+  <source src="\src\vector\reals-v0.0.mp4" type="video/mp4">
+</video>
+
+
+
+## Reals
+
+<div class="axiom">
+    A <em><b>real number</b></em> is defined to be an object of the form $LIM_{n\to \infty} a_n$, where $\left( a_n \right) _ 0^\infty$ is a Cauchy sequence of rational numbers. Two real numbers $LIM_{n\to \infty} a_n$ and $LIM_{n\to \infty} b_n$  are said to be equal iff $\left( a_n \right) _ 0^\infty$ and $\left( b_n \right) _ 0^\infty$ are equivalent Cauchy sequences. The set of all real numbers is denoted $\mathbb{R}$.  
+</div>
+<div class="proof">    
+This equivalence is well-defined in the sense that: if $x,y,z$ are real numbers, $x = x$; $x = y \implies y = x$; and $x = y, y = z \implies x = z.$   
+</div>
+The only content of this object is that it is built on top of Cauchy sequences and is  equal to another object of this kind if the corresponding cauchy sequences are equivalent -- which happens precisely when they are eventually (and arbitrarily) closer to each other. In this sense, this object is the far away content of the cauchy sequences. And it is this equivalence that motivates us to call this object a LIMIT of the sequence. For all that matters, a real number is basically a cauchy sequence of rational numbers modulo the equivalence! We are simply giving it a name $LIM_{n\to \infty}$ just for brevity. It is in this spirit that the above animation was made -- informally, $\mathbb{Q} \times \mathbb{Q} \times \cdots / \sim$. Where, $/ \sim$ describes the equivalence condition on infinite collection of rationals (sequences)! 
+
+
+
+Informally this would mean that all such sequences $\left( a_n \right)_ 0 ^\infty $ which are appearing to converge to $\sqrt{2}$ are equivalent, and together define a real number called $LIM_{n\to \infty}a_n$. We could further specify this real number as $\sqrt{2}$ as a nomenclature, because all such equivalent sequences are precisely defined to be equivalent in the sense that they converge to a same entity, regardless of whether that entity is a rational. We can go ahead and just call that entity as $\sqrt{2}$ here, just like we called an incrementation of $0$ as $1$, and all that. However, $\sqrt{}$ here offers only a case-specific nomenclature. Thus, $LIM_{n\to \infty}$ offers a more universal nomenclature for the real numbers viz. the Cauchy sequences modulo equivalence. Everything about Reals can be now deduced just from this abstraction -- the Cauchy sequences modulo equivalence.  
+
+## Architecture of Reals 
+
+<div class="proposition">
+    Addition and Multiplication of reals.
+</div>
+<div class="proof">
+    If $x = LIM_{n\to \infty}a_n$ and $y = LIM_{n\to \infty}$ are two real numbers, then we define the sum $x+y$ to be, 
+$$ x+y := LIM_{n\to \infty}\left( a_n + b_n \right).$$
+The product $xy$ to be:
+$$ xy: = LIM_{n\to \infty}a_nb_n. $$  
+</div>
+
+These definitions are valid only if the sums and products of two Cauchy sequences are Cauchy. We need to also verify the well-definedness of addition and multiplication by substituting a real $x$ or $y$ with its equivalent counterpart $x'$ or $y'$ (in the sense of equivalent Cauchy sequences). One can check that the above definitions are both valid and well-defined w.r.t (axiom of) substitutions.
+
+We can now embed rationals into reals!
+ 
+<div class="proposition">
+Rationals as instances of Real numbers.
+</div>
+<div class="proof">
+We can uniformly identify $LIM_{n \to \infty}$ to be the familiar rationals in certain situations! Consider any rational $q$, and the sequence $a_n = q, \forall n \in N.$ We set $LIM_{n \to }a_n = LIM_{n\to  \infty}q = q.$ This is motivated by the eventual behavior of any Cauchy sequence which is equivalent to $a_n$, it must eventually be all $q$s. In this sense the above identification is well behaved with equality. Further this is also consistent with the addition and multiplication,
+
+$$ 
+\begin{align*}
+    \left(LIM_{n\to \infty} q\right) + \left(LIM_{n \to \infty} r\right) &= LIM_{n \to \infty} (q+r) = q+r \\
+\left(LIM_{n \to \infty}q\right) \times \left( LIM_{n \to \infty} b\right) &= LIM_{n \to \infty} (qr) = qr
+.\end{align*}
+ $$  
+</div>
+
+Before mentioning how big reals are compared to rationals, how <em>complete</em> they are..., let's finish our standard study of the algebraic laws and order on these numbers. 
+
+
+
+
+Also, the negation and subtraction oeprations follow trivially. With those, one can verify that the algebraic laws of integers (those of a commutative ring) are satisfied by Reals too.  However, taking reciprocals is non-trivial and we need to make sure our sequences don't have zeroes and do not <em>approach</em> zero too -- so that we can define the convenient $(LIM_{n \to \infty}x)^{-1} = LIM_{n\to \infty}x^{-1}$).
+
+For example, the sequence $0.1, 0.01, 0.001, \ldots$ approaches zero and the reciprocal sequence to this would be $10, 100, 1000,...$ which is not even bounded! Having zeroes within the sequence is an obvious trouble to the aiming definition of reciprocal LIMITS.
+
+The situation however is rather remarkable.
+
+<div class="proposition">
+    Let $x$ be any non-zero real number (i.e. $x \neq 0 \in \mathbb{Q}$ in the sense of rational embedding in reals). Then $x = LIM_{n\to \infty}a_n$ for some Cauchy sequence $\left( a_n \right) _ 0^{\infty}$ which is bounded away from zero!  
+
+By bounded away from zero, we mean there exists a rational number $c > 0$ such that $\left| a_n \right| > c$ for all $n\ge 0.$   
+</div>
+<div class="proof">
+    This means we do not have to worry about the zeroes within the sequence when the real number is non-zero by reciprocating the sequence which is bounded away from zero. Let's see how we can find such a sequence.
+
+$x \in \mathbb{R} \implies x = LIM_{n\to \infty} b_n$ for some Cauchy sequence $(b_n)_ 0^\infty$. Given,  $x \neq 0$, so $(b_n)$ and $(0)$ are not equivalent Cauchy sequences. That means there is an $\epsilon > 0$ such that $(b_n)$ is not eventually $\epsilon$-close to $0.$ On the other hand there is an $N$ such that $\left| b_n - b_m \right| \le \epsilon /2$ for all $n, m \ge N.$ But there is an $n_0 > N$ such that $\left| b_{n_0} \right| > \epsilon$ since $b_n$ is not eventually $\epsilon$-close to $0$. So by triangular inequality, $|b_n| \ge \epsilon /2$ for all $n \ge N$  Defining a new sequence $(a_n)$ with $a_n = \epsilon /2$ for $n <  N$, and $a_n = b_n$ for all $n\ge N$ we see that $\left( a_n \right)_ 0 ^\infty$ is bounded away from zero!      
+</div>
+
+It turns out easily that the Cauchy sequences which are bounded away fromzero can be reciprocated element by a element to form a new Cauchy sequence. With this, we formally define the reciprocal of a non-zero real number as follows.
+
+<div class="axiom">
+    Let $x$ be a non-zero real number. Let $(a_n)_ 0 ^\infty$ be Cauchy sequence bounded away from zero such that $x = LIM_{n\to \infty} a_n$ from the last result. THen we define the reciprocal $x^{-1}$ by the formula $x^{-1}:=LIM_{n\to \infty}a_n^{-1}.$  
+</div>
+
+This can be verified to be well-defined with regard to the equivalence condition (axiom of substitution).
+
+Thus, all the operations on rationals are now applicable on reals too! And it can be checked that the algebraic laws of the last article for rationals (that of an ordered field) follow in the case of Real numbers too. 
+
+In the case of reals, the order is dictated by the following notion of  sequences being positively or negatively bounded away from zero.
+
+<div class="axiom">
+   A real number $x$ is said to be <em>positive</em> iff it can be written as $x = LIM_{n\to \infty}a_n$ for some Cauchy sequence $\left( a_n \right) _ 0 ^\infty$ which is positive bounded away from zero, i.e. there is a rational $c > 0$ such that $a_n \ge  c$ for all $n \ge 0$. Similarly the negative real numbers.    
+</div>
+
+The absolute value and an order between any two real numbers follows from this notion as usual. All the other familiar order laws involving reciprocals of reals also follow. Further, these are bounded and interspersed by rationals (with the infamous Archimedian principle as a corollary).
+
+<div class="proposition">
+
+<ul style="margin-left: 20px;">
+<li>Let $x$ be a positive real number. Then there exists a positive rational number $q$ such that $q \le x$ and a positive integer $N$ such that $x \le N$.  </li>
+<br>
+<li> Also, given any two real number $x < y$, we can find a rational number $q$ such that $x < q < y.$   </li>
+</ul>
+</div>
+
+<div class="proof">
+    To make sense of this structure of reals, it's nice to go through the proof idea. The first result follows from the existence of a sequence positively bounded away from zero, and the result on rational numbers that there is always an integer above a rational. 
+
+For the second result, consider $y-x > 0$, then there exists a natural $N>0$ such that  $Ny - Nx > 1$. This basically means there is an integer between $Nx and Ny$, namely the $[Nx] + 1$ (where $[Nx]$ is the greatest integer below $Nx$, call it $L$). $Nx < L+1 < Ny$ and thus $x < \left( L+1 \right)/ N < y$. The rational $q = \left( L+1 \right) / N$ is between $x$ and $y$.   
+</div>
+
+Until now, all is familiar from the rationals. In the next article we discuss the features of Reals that reflect a completeness compared to rationals. In particular, we will see the existence of <em>nthi roots</em> of non-negative real numbers, and the existence of least upper bounds and greatest lower bounds for bounded subsets of $\mathbb{R}$.
+
+Also, we are yet to formalize the notion of LIMITs and connect it to something that we can work with, viz. the actual notion of limits. In order to do so we develop the notion of convergence for the sequences of real numbers, since now it is actually possible to talk about it because of the newly added numbers which are precisely in the form of limits. This will take us to the analysis of sequences on real numbers in general.   
+
+----------
+PS: There is no axiom of finite choice. The result of finite choice follows from the lemma of single choice which follows from the axiom of empty set!
+
+We are yet to discuss the justification of completing rationals through Cauchy sequences.
+

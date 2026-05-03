@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300mm"
+   height="200mm"
+   viewBox="0 0 300 200"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="hero-intro.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.53297527"
+     inkscape:cx="430.60159"
+     inkscape:cy="349.92243"
+     inkscape:window-width="1536"
+     inkscape:window-height="804"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Noise Fill"
+       id="filter922"
+       x="0"
+       y="0"
+       width="1"
+       height="1">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="25.9164 49.0625"
+         numOctaves="1"
+         seed="100"
+         result="turbulence"
+         id="feTurbulence921" />
+      <feComposite
+         in="SourceGraphic"
+         in2="turbulence"
+         operator="in"
+         result="composite1"
+         id="feComposite921" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 27.8425 -10.3818 "
+         result="color"
+         id="feColorMatrix921" />
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(230,190,60)"
+         result="flood"
+         id="feFlood921" />
+      <feMerge
+         result="merge"
+         id="feMerge922">
+        <feMergeNode
+           in="flood"
+           id="feMergeNode921" />
+        <feMergeNode
+           in="color"
+           id="feMergeNode922" />
+      </feMerge>
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite922" />
+    </filter>
+    <filter
+       inkscape:menu-tooltip="Adds a turbulent transparency which displaces pixels at the same time"
+       inkscape:menu="Overlays"
+       inkscape:label="Rough Transparency"
+       style="color-interpolation-filters:sRGB"
+       id="filter1144"
+       x="-0.27749601"
+       y="-0.27749601"
+       width="1.554992"
+       height="1.554992">
+      <feTurbulence
+         result="result3"
+         baseFrequency="10"
+         type="turbulence"
+         seed="875"
+         numOctaves="8"
+         id="feTurbulence1142" />
+      <feGaussianBlur
+         stdDeviation="0.004932966"
+         result="result91"
+         id="feGaussianBlur1142" />
+      <feDisplacementMap
+         result="fbSourceGraphic"
+         in="SourceGraphic"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="30"
+         in2="result91"
+         id="feDisplacementMap1142" />
+      <feColorMatrix
+         type="luminanceToAlpha"
+         in="fbSourceGraphic"
+         result="result0"
+         id="feColorMatrix1142" />
+      <feColorMatrix
+         result="result2"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+         id="feColorMatrix1143" />
+      <feComposite
+         in2="result2"
+         operator="over"
+         in="result3"
+         result="result4"
+         id="feComposite1143" />
+      <feGaussianBlur
+         stdDeviation="2"
+         result="result5"
+         id="feGaussianBlur1143" />
+      <feDisplacementMap
+         scale="100"
+         xChannelSelector="R"
+         in="result5"
+         in2="result3"
+         yChannelSelector="G"
+         id="feDisplacementMap1143" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6.5 -4.5 "
+         result="result92"
+         id="feColorMatrix1144" />
+      <feComposite
+         in="fbSourceGraphic"
+         operator="out"
+         in2="result92"
+         id="feComposite1144"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix1145" />
+      <feTurbulence
+         id="feTurbulence1145"
+         result="result3"
+         baseFrequency="0.3"
+         type="fractalNoise"
+         seed="0"
+         numOctaves="3" />
+      <feGaussianBlur
+         id="feGaussianBlur1145"
+         stdDeviation="1.5"
+         result="result91" />
+      <feDisplacementMap
+         id="feDisplacementMap1145"
+         result="fbSourceGraphic"
+         in="fbSourceGraphic"
+         xChannelSelector="R"
+         yChannelSelector="G"
+         scale="30"
+         in2="result91" />
+      <feColorMatrix
+         id="feColorMatrix1146"
+         type="luminanceToAlpha"
+         in="fbSourceGraphic"
+         result="result0" />
+      <feColorMatrix
+         id="feColorMatrix1147"
+         result="result2"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 " />
+      <feComposite
+         id="feComposite1147"
+         in2="result2"
+         operator="over"
+         in="result3"
+         result="result4" />
+      <feGaussianBlur
+         id="feGaussianBlur1147"
+         stdDeviation="2"
+         result="result5" />
+      <feDisplacementMap
+         id="feDisplacementMap1147"
+         scale="100"
+         xChannelSelector="R"
+         in="result5"
+         in2="result3"
+         yChannelSelector="G" />
+      <feColorMatrix
+         id="feColorMatrix1148"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 6.5 -4.5 "
+         result="result92" />
+      <feComposite
+         id="feComposite1148"
+         in="fbSourceGraphic"
+         operator="out"
+         in2="result92" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Noise Fill"
+       id="filter1182"
+       x="-1.4901522e-05"
+       y="-1.4901522e-05"
+       width="1.0000298"
+       height="1.0000298">
+      <feTurbulence
+         type="fractalNoise"
+         baseFrequency="2.44606796875 10"
+         numOctaves="3"
+         seed="371"
+         result="turbulence"
+         id="feTurbulence1181" />
+      <feComposite
+         in="SourceGraphic"
+         in2="turbulence"
+         operator="in"
+         result="composite1"
+         id="feComposite1181" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 17.1801 -7.05362 "
+         result="color"
+         id="feColorMatrix1181" />
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(232,196,77)"
+         result="flood"
+         id="feFlood1181" />
+      <feMerge
+         result="merge"
+         id="feMerge1182">
+        <feMergeNode
+           in="flood"
+           id="feMergeNode1181" />
+        <feMergeNode
+           in="color"
+           id="feMergeNode1182" />
+      </feMerge>
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite1182" />
+      <feGaussianBlur
+         stdDeviation="0.00032322135"
+         id="feGaussianBlur1184" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-opacity:0.790795;stroke:#000000;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       d="M 67.412904,56.768761 138.61039,164.15947 233.07325,54.424995 Z"
+       id="path1191" />
+    <circle
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.262157;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       id="path1186"
+       cx="137.68852"
+       cy="161.30093"
+       r="21.610207" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Sans;-inkscape-font-specification:Sans;writing-mode:lr-tb;direction:ltr;fill:#f9f9f9;fill-opacity:0.790795;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       x="123.54208"
+       y="164.15947"
+       id="text1187-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans;fill:#f9f9f9;stroke-width:0.280882"
+         x="123.54208"
+         y="164.15947"
+         id="tspan1188-2">Hyderabad</tspan></text>
+    <circle
+       style="fill:#add700;fill-opacity:1;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1;opacity:1"
+       id="circle1186"
+       cx="234.82678"
+       cy="57.936848"
+       r="23.153793" />
+    <circle
+       style="fill:#3a3a3a;fill-opacity:1;stroke:none;stroke-width:0.262157;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       id="circle1187"
+       cx="67.424019"
+       cy="54.236698"
+       r="21.610207" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Sans;-inkscape-font-specification:Sans;writing-mode:lr-tb;direction:ltr;fill:#f9f9f9;fill-opacity:0.790795;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       x="50.04715"
+       y="49.474194"
+       id="text1187"><tspan
+         sodipodi:role="line"
+         id="tspan1187"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans;fill:#f9f9f9;stroke-width:0.280882"
+         x="50.04715"
+         y="49.474194">NISER</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Sans;-inkscape-font-specification:Sans;fill:#f9f9f9;stroke-width:0.280882"
+         x="50.04715"
+         y="55.118633"
+         id="tspan1188">Bhubaneswar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Sans;-inkscape-font-specification:Sans;writing-mode:lr-tb;direction:ltr;fill:#1a1a1a;fill-opacity:0.790795;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       x="226.12378"
+       y="54.424995"
+       id="text1189"><tspan
+         sodipodi:role="line"
+         id="tspan1189"
+         style="fill:#1a1a1a;stroke-width:0.280882"
+         x="226.12378"
+         y="54.424995"> Break</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Sans;-inkscape-font-specification:Sans;writing-mode:lr-tb;direction:ltr;fill:#1a1a1a;fill-opacity:0.790795;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       x="222.29294"
+       y="65.130302"
+       id="text1190"><tspan
+         sodipodi:role="line"
+         id="tspan1190"
+         style="stroke-width:0.280882"
+         x="222.29294"
+         y="65.130302">2025-2026</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:1;font-family:Sans;-inkscape-font-specification:Sans;writing-mode:lr-tb;direction:ltr;fill:#f9f9f9;fill-opacity:0.790795;stroke:none;stroke-width:0.280882;stroke-linecap:round;stroke-dashoffset:1.60494;stroke-opacity:1"
+       x="53.94146"
+       y="65.179398"
+       id="text1191"><tspan
+         sodipodi:role="line"
+         id="tspan1191"
+         style="fill:#f9f9f9;stroke-width:0.280882"
+         x="53.94146"
+         y="65.179398">2020-2025</tspan></text>
+  </g>
+</svg>

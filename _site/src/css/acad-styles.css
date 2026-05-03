@@ -1,0 +1,267 @@
+
+:root {
+    --acadWidth: 4%;
+}
+
+
+
+#academic {
+    /* width: 100%; */
+    max-width: 80rem;
+    /* min-height: 100vh; */
+    /* background-color: #000; */
+    /* border: 1px solid red; */
+    /* z-index:1; */
+}
+
+
+.acad-container {
+    /* margin-left: -8%; */
+    /* transform: skewX(20deg); */
+    margin-top: 2px;
+    /* background-color: var(--yellow-green-accent); */
+    width: 100%;
+    height: auto;
+    /* margin-top: 20px; */
+    display: grid;
+    /* border: 1px solid red; */
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'heading items';
+    /* row-gap: 5px; */
+    /* column-gap: -20px; */
+    /* Ensure content stays pinned to the top during expansion */
+}
+
+.field-list-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+    /* row-gap: 2px; */
+    margin-left: -24.6%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'academic' 'creative';
+    row-gap: 1px;
+}
+
+.acad-list-wrapper {
+    grid-area: items;
+    display: grid;
+    /* margin-left: -5%; */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* border: 1px solid red; */
+    transition: grid-template-rows 0.5s ease;
+    /* padding: 10px; */
+    grid-area: academic;
+    height: 75vh;
+    row-gap: 0px;
+}
+
+.expand {
+    grid-template-rows: var(--expandedRows);
+    /* align-items: start, */
+}
+
+.acad-heading {
+    grid-area: heading;
+    display: grid;
+    /* display: none; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    /* justify-content: center; */
+    grid-template-areas: 'academic' 'creative';
+    /* border: 1px solid red; */
+    clip-path: polygon(0 0, 50.5% 0, 100% 100%, 0 100%);
+    row-gap: 2px;
+    z-index: 999;
+}
+
+.academic-heading {
+    position: relative;
+    grid-area: academic;
+    background-color: #222;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    padding-right: 20%;
+
+}
+
+.academic-heading p {
+    /* border: 1px solid red; */
+    font-family: 'Josefin Sans', sans-serif;
+    /* transform: skewX(-20deg); */
+    color: var(--yellow-green-accent);
+    font-size: 1.8em;
+}
+
+
+.acad-sep {
+    grid-area: sep;
+    position: relative;
+    /* border: 1px solid red; */
+
+}
+
+.acad-list {
+    grid-auto-flow: row;
+}
+
+
+
+/* .acad-node {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    left: calc(50% - 5px);
+    height: 10px;
+    border-radius: 50%;
+    background-color: #222;
+} */
+
+.acad-sep {
+    display: flex;
+    justify-content: center;
+}
+
+.acad-list {
+    color: var(--yellow-green-accent);
+    /* padding-top: 10px; */
+    background-color: #222;
+    border-bottom: 1px solid white;
+    /* border-radius: 5px; */
+    /* align-self: start; */
+    /* border: 1px solid red; */
+    transition: background-color 0.2s ease;
+    /* transition: padding-left 0.5s ease; */
+}
+
+.acad-list>* {
+    /* margin-left: auto; */
+    /* text-align: right; */
+    /* padding-right: 10px; */
+    /* border: 1px solid red; */
+    /* margin-left: 10px; */
+}
+
+.focus {
+    color: black;
+    background-color: var(--yellow-green-accent);
+    /* background-color: rgb(255, 255, 255); */
+    /* font-weight: 600; */
+    /* background: url('assets/images/trek-dither.png'); */
+}
+
+.acad-list {
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+    /* justify-content: space-around;  */
+    /* gap: 20px; */
+    /* padding: 10px; */
+    overflow-y: hidden;
+    position: relative;
+
+}
+
+.acad-description {
+    padding-top: 20px;
+    color: #222;
+    display: none;
+}
+
+.acad-item {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+.field-list-container {
+    --slant: 4%;
+}
+
+.card-left {
+    float: inline-start;
+    height: 100%;
+    /* opacity: 0; */
+    --padding: 20px;
+    /* background-color: aqua; */
+}
+
+.card-1 {
+    width: calc(var(--acadWidth) + var(--padding));
+    shape-outside: polygon(0 0, var(--padding) 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, var(--padding) 0, 100% 100%, 0 100%);
+}
+.card-2 {
+    width: calc(2*var(--acadWidth) + var(--padding));
+    /* margin: 0; */
+    shape-outside: polygon(0 0,calc(var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0,calc(var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+}
+
+.card-3 {
+    width: calc(3*var(--acadWidth) + var(--padding));
+    /* margin: 0; */
+    shape-outside: polygon(0 0,calc(2*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0,calc(2*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+}
+.card-4 {
+    width: calc(4*var(--acadWidth) + var(--padding));
+    /* margin: 0; */
+    shape-outside: polygon(0 0,calc(3*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0,calc(3*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+}
+
+.card-5 {
+    width: calc(5*var(--acadWidth) + var(--padding));
+    /* margin: 0; */
+    shape-outside: polygon(0 0,calc(4*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0,calc(4*var(--acadWidth) + var(--padding)) 0, 100% 100%, 0 100%);
+}
+
+
+
+img.acad-img {
+    display: block;
+    position: absolute;
+    bottom:20%;
+    width: 25%;
+    /* left: 10%; */
+    opacity: 0.8;
+    transition: display 1s ease-out;
+}
+
+#manifolds {
+    filter: invert(80%);
+    bottom: -10%;
+    width: 30%;
+    margin-left: 5%;
+}
+
+#gauge-fields {
+    filter: invert(90%);
+    width: 50%;
+    bottom: -70%;
+}
+
+#energy-transfer {
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
+    bottom: -10%;
+    width: 30%;
+    margin-left: 10%;
+}
+
+#FDM {
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
+    top: -60%;
+    width: 30%;
+    margin-left: 12%;
+}
+
+
+

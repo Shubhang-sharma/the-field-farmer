@@ -1,0 +1,168 @@
+---
+title: Integers
+layout: default
+tags: Analysis
+categories: Farm
+excerpt: "Last time, we saw how to construct natural numbers from the ground up. Starting from $0$ and the increment operation and then establishing some intuitive axioms. In particular the principle of induction is powerful and goes a long way, other axioms lead to many symmetries/properties between the new operations we defined -- addition and multiplication which occur as fundamental examples of recursive definitions. We also saw that the natural numbers are completely <em>ordered.</em>"
+---
+
+<span class="interest">Hyping pairs of Naturals modulo ... </span>
+
+
+Last time, we saw how to construct natural numbers from the ground up. Starting from $0$ and the increment operation and
+then establishing some intuitive axioms. In particular the principle of induction is powerful and goes a long way, other
+axioms lead
+to many symmetries/properties between the new operations we defined -- addition and
+multiplication which occur as fundamental examples of recursive definitions. We also saw that the natural numbers are
+completely
+<em>ordered.</em>
+
+
+## Integers
+
+Integers come along with natural numbers. They come as a way to keep track of the deficit between two naturals. So
+structurally they are made of a pair of natural numbers, *modulo* an
+equivalence condition. By modulo we mean we consider a set of pairs of natural numbers to be equal or equivalent if the
+rule that
+"their *difference* is equal" is satisfied. We see the pair of natural numbers through this "lens" where two natural
+number pairs
+appear same (cf. the animation below). For example we put $3 \setminus 5 = 7 \setminus 9 = 11\setminus 13 .$ But the
+operation "$\setminus $" is not yet defined. This is just an auxiliary symbol to represent the pair, guided by our
+intuition.
+In
+fact, we will define the subtraction, using this very abstraction of integers soon.
+Integers, to start with will be viewed as a pair of natural numbers written *formally* (in the form) as $a \setminus
+b.$
+
+<div class="axiom">
+  An <em>integer</em> is an expression of the form $a \setminus b$, where $a$ and $b$ are natural numbers. Two integers
+  are considered to be equal, $ a\setminus b = c \setminus d$, if and only if $a + d = c + b$. We let $\mathbb{Z}$
+  denote the set of
+  all integers.
+</div>
+
+<video autoplay muted loop style="width:80%; display:block; margin: 0 auto;">
+  <source src="/src/vector/integers-v3.0.mp4" type="video/mp4">
+</video>
+
+## Architecture of Integers
+
+We define the addition and multiplicaation operations on integers using our framework of integers as pairs of natural
+numbers. The symmetries/properties follow immediately like in natural numbers. The additional structure in integers
+(namely, the negation)
+helps us define the subtraction operation. There is again a linear order on integers, which extends the order on
+naturals.
+<div class="proposition">
+  Addition and multiplication of integers.
+</div>
+<div class="proof">
+  The sum of two integers, $ (a \setminus b) + (c \setminus d)$ is defined to be $$(a \setminus b) + (c \setminus d) :=
+  (a + c) \setminus (b + d).$$ The product
+  of two integers, $(a \setminus b)\times(c \setminus d)$ is defined to be $$ (a \setminus b)\times (c \setminus d) :=
+  (ac + bd) \setminus (ad + bc).$$
+</div>
+
+Given the equivalence condition on the integers, the above definition is subject to a well-definedness check. If two
+different representations of the same integer are chosen, whether the the results of addition and multiplication are
+still equivalent. Indeed it turns out that's the case!
+
+<div class="proposition">
+  Naturals are part of Integers
+</div>
+<div class="proof">
+  <p>$n \setminus 0$ behaves in the same way as the natural number $n$: $$ (n \setminus 0) + (m\setminus 0) = (n+m)
+    \setminus 0; ~ (n\setminus 0)\times (m \setminus 0) =
+    nm
+    \setminus 0.$$ Further, $(n \setminus 0) = (m\setminus 0)$ if and only if $n = m.$ This allows us to identify the
+    natural number $n$ with the
+    integer
+    $n \setminus 0$! In this sense, all natural numbers can be considered as integers.</p>
+</div>
+Now to the structure which makes it very clear that the Integers are an extension to Natural numbers.
+<div class="proposition"> Integers are an extension to Natural numbers.</div>
+
+<div class="proof">
+  <p>If $a\setminus b$ is an integer, we define the <em>negation</em> $-(a\setminus b)$ to be the integer $(b\setminus
+    a)$. In
+    particular, if
+    $n = n \setminus 0$ is a positive natural number, we can define its negation $-n = 0 \setminus n$.</p>
+
+  <p>
+    Intuitively, that's all the integers we know. And
+    indeed,
+    it precisely follows that there is a <em>trichotomy</em> in integers: they are either $0$, a positive natural number
+    or a
+    negation of a positive natural number.
+  </p>
+  <p>This, follows from the order in Natural numbers. If $a \setminus b$ is an integer, then either $a = b$, or $a > b$
+    or $a < b$. If $a> b$, then $a = b + c$ for some positive natural number $c$, and hence $a \setminus b = c \setminus
+      0$ is a positive
+      natural
+      number. If $a < b$, then $b=a + c$ for some positive natural number $c$. Then, $ a \setminus b=0 \setminus c$ by
+        our equivalence condition. This shows $a \setminus b=-c.$ If $a=b$, then $a \setminus b=0 \setminus 0=0$, by our
+        equivalence condition again. The other case is similar and we thus have integers as an extension to the natural
+        number in the sense of negation. One can also show that no two of the above relations in the trichotomy can be
+        satisfied at simultaneously! It will soon be clear that the Integers are an extension to Naturals in the
+        negative <em>direction.</em></p>
+</div>
+The following symmetries follow from the definitions and properties of natural numbers which can be proven ny using the
+pair form of integers.
+<div class="proposition not">The laws of algebra for Integers:
+
+  $$\begin{align}
+  x + y &= y + x \\
+  (x + y) + z &= x + (y + z) \\
+  x + 0 &= 0 + x = x \\
+  x + (\setminus x) &= (\setminus x) + x = 0 \\
+  xy &= yx \\
+  (xy)z &= x(yz) \\
+  x1 &= 1x = x \\
+  x(y + z) &= xy + xz \\
+  (y + z)x &= yx + zx.
+  \end{align}$$
+</div>
+
+Drumrolls please... We finally define the subtraction operation on integers (or naturals), which was the whole point of
+introducing integers.
+
+<div class="proposition">We define the <em>subtraction</em> operation $x - y$ of two integers by the formula
+  $$x - y : = x + (-y).$$
+</div>
+<div class="proof">So, subtraction is made up of addition and negation operations. It is thus well-defined and its
+  behavorial quirks follow from the laws of algebra noted in the last block, treated essentially as an addition!
+
+  <p>Most importantly, if $a, b$ are two natural numbers we see that:
+    $a - b = a + -b = (a \setminus 0) + (0 \setminus b) = a \setminus b!$ So, the integers which were defined to be only
+    <em>in the form
+      of</em> $a
+    \setminus b$ in the beginning is indeed $a - b$ funtionally too! We thus ditch the "$\setminus$"" notation and start
+    using the notation of subtraction. Given an understanding that, the integers are first defined abstractly just using
+    the natural number pairs, rather than any operation. That is, one must define integers first to make sense of
+    subtraction. Subtraction then becomes a functional equivalence to the original abstract definition of integers. Note
+    that subtraction is applicable more broadly -- we can subtract two integers, while the notation we started with
+    defines (as we now know) integers as difference between two natural numbers. Indeed we defined all the operations in
+    a way that captures the intuition of subtraction. It's really a no surprise, other than the demonstration of the
+    work of mathematics, and our goal to construct a rigorous theory of numbers.
+  </p>
+</div>
+
+<div class="proposition"> There is again an ordering on the integers with a definition similar to that of naturals. This
+  way one can see that the negation of natural number (let's call them <em>negative numbers</em>) are always less than
+  the $0$ and the positive natural natural numbers. In particular there we have the following structure:
+  $$ \ldots < -7 < \ldots -3 < -2 < -1 < 0 < 1 < 2 < 3 < \ldots < 7 \ldots $$ For example, $-3 < -2$ because $-2=-3 +
+    1$, where 1 is a positive natural number (> 0).</div>
+
+
+This complete the architecture of integers. We see that the integers are an extension to natural numbers in the negative
+direction. The integers are again completely ordered. The operations of addition, multiplication and subtraction are
+defined and satisfy the laws of algebra. The integers further have a <em>natural</em> structural trichotomy.
+
+
+Next up: Rational Numbers.
+
+
+
+-------------------
+
+PS: Note that the natural numbers and integers have no zero divisors. And integers fall into a class of
+algebraic objects called commutative rings. Details may be some other time.

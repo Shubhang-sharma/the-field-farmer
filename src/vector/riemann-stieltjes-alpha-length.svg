@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="142.74359mm"
+   height="80.66201mm"
+   viewBox="0 0 142.74359 80.66201"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="riemann-stieltjes-alpha-length.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="1.4603079"
+     inkscape:cx="249.6049"
+     inkscape:cy="163.32172"
+     inkscape:window-width="1536"
+     inkscape:window-height="804"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-30.979115,-71.863772)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.421322;stroke-linecap:round"
+       d="M 31.189776,152.31512 H 173.51205"
+       id="path1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.421322;stroke-linecap:round"
+       d="M 46.644723,133.75983 72.339919,118.9247"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.421322;stroke-linecap:round"
+       d="M 73.295168,107.85762 116.88686,98.116463"
+       id="path3" />
+    <circle
+       style="fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.421322;stroke-linecap:round"
+       id="path5"
+       cx="117.40307"
+       cy="103.23721"
+       r="0.56504393" />
+    <circle
+       style="fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.421322;stroke-linecap:round"
+       id="circle5"
+       cx="72.785088"
+       cy="113.26039"
+       r="0.56504393" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.334;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="circle6"
+       cx="72.780342"
+       cy="107.92856"
+       r="0.44752765" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.333697;stroke-linecap:round;stroke-opacity:1"
+       id="circle7"
+       cx="117.37939"
+       cy="98.007179"
+       r="0.44752765" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.421322;stroke-linecap:round"
+       d="m 117.89942,113.53908 25.54523,-12.36666"
+       id="path7"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.333697;stroke-linecap:round;stroke-opacity:1"
+       id="circle8"
+       cx="93.841248"
+       cy="133.81819"
+       transform="rotate(-10.877117)"
+       r="0.44752765" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.333697;stroke-linecap:round;stroke-opacity:1"
+       id="circle11"
+       cx="72.785088"
+       cy="118.69113"
+       r="0.44752765" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.333999;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 37.356933,72.030772 V 152.31512"
+       id="path12" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:0.8, 1.6;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 37.356933,97.839157 H 155.68906"
+       id="path13" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-dasharray:0.8, 1.6;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 37.356933,107.89337 H 155.68906"
+       id="path14" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:8.38821px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.198147;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="90.712677"
+       y="80.01181"
+       id="text14"
+       transform="scale(0.7541763,1.3259499)"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.198147;stroke-dasharray:none"
+         x="90.712677"
+         y="80.01181">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23973px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.0671012;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="89.172058"
+       y="94.734123"
+       id="text15"><tspan
+         sodipodi:role="line"
+         id="tspan15"
+         style="stroke-width:0.0671012"
+         x="89.172058"
+         y="94.734123">$I$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.60605px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.0728988;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="65.079437"
+       y="115.20488"
+       id="text16"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0728988"
+         x="65.079437"
+         y="115.20488"
+         id="tspan19">$a$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.60605px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.0728988;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="109.63139"
+       y="104.88172"
+       id="text20"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.0728988"
+         x="109.63139"
+         y="104.88172"
+         id="tspan20">$b$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.134;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="50.472042"
+       y="103.88563"
+       id="text21"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         style="font-size:4.23333px;stroke-width:0.134"
+         x="50.472042"
+         y="103.88563">$\alpha[I]$</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:round;stroke-dasharray:0.1, 0.6;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 37.356933,113.18507 H 155.68906"
+       id="path23" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:round;stroke-dasharray:0.1, 0.6;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 37.718965,118.70782 H 156.05109"
+       id="path24" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:6.83274px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.061;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-133.72969"
+       y="67.045204"
+       id="text24"
+       transform="scale(-0.57499185,1.7391551)"><tspan
+         sodipodi:role="line"
+         id="tspan24"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.061;stroke-dasharray:none"
+         x="-133.72969"
+         y="67.045204">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.134;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="77.226212"
+       y="114.33235"
+       id="text25"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         style="font-size:4.23333px;stroke-width:0.134"
+         x="77.226212"
+         y="114.33235">$\alpha\{a\}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:#000000;stroke-width:0.134;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="121.03836"
+       y="104.94236"
+       id="text26"><tspan
+         sodipodi:role="line"
+         id="tspan26"
+         style="font-size:4.23333px;stroke-width:0.134"
+         x="121.03836"
+         y="104.94236">$\alpha\{a\}$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-size:7.96945px;line-height:1;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond Italic';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.0711481;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="-243.77611"
+       y="54.293003"
+       id="text27"
+       transform="scale(-0.49297883,2.0284847)"><tspan
+         sodipodi:role="line"
+         id="tspan27"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond';fill:#3f2828;fill-opacity:1;stroke:none;stroke-width:0.0711481;stroke-dasharray:none"
+         x="-243.77611"
+         y="54.293003">{</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:round;stroke-dasharray:0.1, 0.6;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 37.382383,103.27088 H 155.71451"
+       id="path27" />
+  </g>
+</svg>

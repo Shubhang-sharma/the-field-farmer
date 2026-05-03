@@ -1,0 +1,61 @@
+header {
+    background-color: black;
+    color: white;
+    /* padding: 20px; */
+    .header-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code", Consolas, monospace;
+
+        .name {
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #e8e7e7;
+            /* border: 1px solid red; */
+        }
+
+        .last-active {
+            color: #646464;
+            font-size: 0.7rem;
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+        }
+
+        .phi {
+            color: #d9d8d8;
+
+        }
+    }
+
+    nav {
+        width: 100%;
+        background-color: #000000cb;
+        border-top: 1px solid rgba(255, 255, 255, 0.268);
+        /* border: 1px solid red; */
+        padding-inline: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-block: 5px 10px;
+    }
+
+    a {
+        color: #bababa;
+        text-decoration: none;
+        font-family: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code", Consolas, monospace;
+        /* font-family: 'Courier New', Courier, monospace; */
+        font-size: 0.75rem;
+        font-weight: 200;
+        letter-spacing: 0.7px;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

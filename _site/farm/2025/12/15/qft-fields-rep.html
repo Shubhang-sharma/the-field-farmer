@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/header.css">
+    <link rel="stylesheet" href="/src/css/footer.css">
+    <link rel="stylesheet" href="/src/css/hstyles.css">
+    <link rel="stylesheet" href="/src/css/pstyles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700&display=swap" rel="stylesheet">
+    <title>Shubhang Sharma</title>
+    <script>
+        window.MathJax = {
+            loader: {
+                load: ['[tex]/mathtools']
+            },
+            tex: {
+                // Notice the brackets around 'mathtools' below:
+                packages: { '[+]': ['mathtools'] },
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-main">
+            <div class="name">SHUBHANG SHARMA.</div>
+            <div class="phi">
+                $\sum_i\varphi_i$
+            </div>
+            <div class="last-active">
+                ~ MAY 03.2026, HYDERABAD.
+            </div>
+        </div>
+        <nav>
+            <div class="link"><a href="/">HOME</a></div>
+            <div class="link"><a href="/academic.html">ACADEMIC</a></div>
+            <div class="link"><a href="/creative.html">CREATIVE</a></div>
+            <div class="link"><a href="/fieldfarm">MATH-PH</a></div>
+            <div class="link"><a href="/fieldnotes">FIELDNOTES</a></div>
+            <div class="link"><a href="/blog">BLOG</a></div>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section id="page-container">
+            <div class="bg">
+                
+                
+                <h1 class="page-heading">Fields & Representations</h1>
+                
+                <p>The story starts from Lorentz Lie Algebra.</p>
+
+<p>Under Lorentz transformations we have</p>
+
+\[x^{'\mu} = \Lambda^\mu_{\ \nu} x^\nu\]
+
+<p>where,</p>
+
+\[\Lambda^\alpha_{\ \mu}\,\eta_{\alpha\beta}\,\Lambda^\beta_{\ \nu}
+= \eta_{\mu\nu}
+\qquad (\Lambda^T \eta \Lambda = \eta)\]
+
+<p>We then have,</p>
+
+<p><img src="lgclass.jpg" alt="Classification of the Lorentz Transformation" /></p>
+
+<p><em>Classification of the Lorentz Transformation based on two features. Clearly, the Proper and Improper, similarly Orthochronous and Non-Orthochronous L.T.s are disconnected subsets of the total Lorentz transformations.</em></p>
+
+<div class="proposition"> Every Improper and/or Non-Orthochronous Lorentz transformation can be expressed in terms of Proper and/or Orthochronous Lorentz transformations together with a Space (P) or Time (T) inversion operator,
+
+$$
+P =
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; -1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; -1
+\end{pmatrix},
+\qquad
+T =
+\begin{pmatrix}
+-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+$$
+</div>
+
+<p>For a P.O.L.T,</p>
+
+\[\Lambda^\mu_{\ \nu} = \delta^\mu_{\ \nu} + \omega^\mu_{\ \nu}\]
+
+\[\omega^\mu_{\ \nu} \rightarrow 0
+\quad \Rightarrow \quad
+\Lambda^\mu_{\ \nu} \rightarrow \delta^\mu_{\ \nu}\]
+
+<p>And indeed<br />
+$\det(\delta) = +1$ and $\delta^0_{\ 0} = 1$ as it should be for a P.O.L.T.</p>
+
+<p>Using the defining relation of $\Lambda$, we have</p>
+
+\[(\delta^\alpha_{\ \mu} + \omega^\alpha_{\ \mu})
+\bigl(\eta_{\alpha\beta}(\delta^\beta_{\ \nu} + \omega^\beta_{\ \nu})\bigr)
+= \eta_{\mu\nu}\]
+
+<p>which gives</p>
+
+\[\omega_{\mu\nu} = -\,\omega_{\nu\mu}\]
+
+<p>That is, an antisymmetric tensor<br />
+(rank $4 \Rightarrow 6$ independent elements). We thus write,</p>
+
+\[\omega^\mu_{\ \nu}
+= \frac{1}{2}\,\Omega_A (M^A)^\mu_{\ \nu}
+\equiv
+\frac{1}{2}\,\Omega_{\rho\sigma}(M^{\rho\sigma})^\mu_{\ \nu}\]
+
+<p>where $A$ labels the six basis elements to write a general antisymmetric matrix,<br />
+$(M^A)^\mu_{\ \nu}$, $A=1,\ldots,6 \equiv (M^{\rho\sigma})^\mu_{\ \nu}$,<br />
+antisymmetric in $\rho,\sigma$.</p>
+
+<p>Such an $(M^{\rho\sigma})^{\mu\nu}$, antisymmetric under<br />
+$\rho \leftrightarrow \sigma$ and $\mu \leftrightarrow \nu$, can be written as</p>
+
+\[(M^{\rho\sigma})^{\mu\nu}
+= \eta^{\rho\mu}\eta^{\sigma\nu}
+- \eta^{\nu\rho}\eta^{\mu\sigma}\]
+
+<p>i.e.,</p>
+
+\[(M^{\rho\sigma})^\mu_{\ \nu}
+= \eta^{\rho\mu}\delta^\sigma_{\ \nu}
+- \eta^{\sigma\mu}\delta^\rho_{\ \nu}\]
+
+<p>Further we have,</p>
+
+\[[M^{\rho\sigma}, M^{\tau\nu}]
+= \eta^{\sigma\tau} M^{\rho\nu}
+- \eta^{\rho\tau} M^{\sigma\nu}
+- (\tau \leftrightarrow \nu)\]
+
+<p><span style="color:purple"><strong>This is called the Lorentz Lie Algebra!</strong></span><br />
+$M^{\rho\sigma}$ are called the generators of the Lorentz group and are said to
+satisfy the above Lie algebra. $\Lambda$ is called the <em>fundamental representation</em>
+of the Lorentz Lie algebra and leads to classifications such as scalars, vectors,
+or general tensors under Lorentz transformations.</p>
+
+<hr />
+
+<p><em>Example:</em> Consider a spacetime vector $T^\mu$. It transforms as</p>
+
+\[T'^\mu = \Lambda^\mu_{\ \nu} T^\nu\]
+
+\[\Lambda^\mu_{\ \nu} =
+\begin{cases}
+\displaystyle
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}(M^{\alpha\beta})^\mu_{\ \nu}\right),
+&amp; \text{for infinitesimal transformations} \\[1em]
+\displaystyle
+e^{\frac{1}{2}\Omega_{\alpha\beta}(M^{\alpha\beta})^\mu_{\ \nu}},
+&amp; \text{for finite transformations}
+\end{cases}\]
+
+<hr />
+
+<p>These objects are different from fields. How are they different? Can we say
+four-velocity, which is a four-vector, is a field? But it does not transform as a
+vector field, rather as a four-vector. Is a vector field said to transform like a
+four-vector? That internal $x$-transformation subtlety…</p>
+
+<h3 id="fields-mathematically-manifest-as-representations">Fields mathematically manifest as representations</h3>
+
+<p><em>More representations $\iff$ more QFTs to study…</em></p>
+
+<div class="axiom"> We say a set of matrices represents the Lorentz group if the operations between the matrices preserve the Lorentz group operation, i.e $\Lambda_1\Lambda_2 = \Lambda_3 \implies D(\Lambda_1)D(\Lambda_2) = D(\Lambda_3)$, where $D(\Lambda)$ is a representation of $\Lambda$ that satisfies the Lorentz Lie Algebra.</div>
+
+<p>Consider a scalar field; after the Canonical Quantization, we achieve the particle states with spin 0! Starting from the Vector Field, we have particle states with spin 1! Clearly, these are not the only spins that we observe in reality and we thus look for other kinds of fields, characterized by their behavior under the Lorentz Transformations. Thus the motivation to look for different representations of the Lorentz Lie Algebra comes from the fact that, in QFT we aim to study all those fields that are physically relevant. The physical relevance of these fields is captured by definition 2.1, the way they transform under the L.Ts obeying the Lorentz Lie Algebra.</p>
+
+<p><em>Why is Lorentz Lie Algebra considered the fundamental physical relation that needs to be obeyed by any representation?</em> One answer could be that such an algebra results in representations (thus fields) that give out all the physically observed spin particles upon quantization. (With great advantages come the great troubles of having mathematically infinitely many fields that might have not been observed yet in their quantized forms viz. particles, like say gravitino?).</p>
+
+<p><em>As we saw in the Special Theory of Relativity Course of Fall 2022, there’s a way to directly see all the finite dimensional representations of the Lorentz Lie Algebra labeled by their resultant quantum spins. See Chapter-33, Pg-211, QFT by Srednicki.</em></p>
+
+<p>Let’s study the fields we already know, and place them in the picture of representation theory.</p>
+
+<h3 id="the-fundamental-representation-of-the-lorentz-group">The Fundamental Representation of the Lorentz Group</h3>
+
+<hr />
+
+<h4 id="scalar-fields">Scalar Fields.</h4>
+
+<p>Under<br />
+$x’^\mu \rightarrow x^\mu = \Lambda^\mu_{\ \nu} x’^\nu$</p>
+
+\[\phi'(x) = \phi(\Lambda^{-1}x)\]
+
+<p>i.e. the scalar field essentially follows the same old field, hence called scalar.</p>
+
+\[\begin{aligned}
+\phi'(x^\mu)
+&amp;= \phi\bigl((\delta^\mu_{\ \nu}-\omega^\mu_{\ \nu})x^\nu\bigr) \\
+&amp;= \phi(x^\mu - \omega^\mu_{\ \nu}x^\nu) \\
+&amp;= \phi(x^\mu) - \omega^\mu_{\ \nu}x^\nu \partial_\mu \phi(x) \\
+\delta\phi
+&amp;= -\omega^\rho_{\ \nu} x^\nu \partial_\rho \phi(x)
+\end{aligned}\]
+
+<p>Using the generators, write,</p>
+
+\[\begin{aligned}
+\omega^\rho_{\ \nu}
+&amp;= \frac{1}{2}\Omega_{\alpha\beta}(M^{\alpha\beta})^\rho_{\ \nu} \\
+\delta\phi
+&amp;= \frac{1}{2}\Omega_{\alpha\beta}
+\left(x^\beta\partial^\alpha - x^\alpha\partial^\beta\right)\phi
+\end{aligned}\]
+
+<p>Define,</p>
+
+\[L^{\alpha\beta}
+= x^\alpha\partial^\beta - x^\beta\partial^\alpha\]
+
+<p>Thus,</p>
+
+\[\phi'(x)
+= \left(1+\frac{1}{2}\Omega_{\alpha\beta}L^{\alpha\beta}\right)\phi(x)\]
+
+<p><span style="color:purple"><strong>$L^{\alpha\beta}$ satisfies the Lorentz Lie Algebra!</strong></span></p>
+
+\[\phi'(x) = D(\Lambda)\phi(x)\]
+
+<p>with,</p>
+
+\[D(\Lambda)=
+\begin{cases}
+\displaystyle
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}L^{\alpha\beta}\right),
+&amp; \text{infinitesimal transformations} \\[1em]
+\displaystyle
+e^{\frac{1}{2}\Omega_{\alpha\beta}L^{\alpha\beta}},
+&amp; \text{finite transformations}
+\end{cases}\]
+
+<p><span style="color:purple"><strong>
+We thus realize the scalar representation of the Lorentz group (which is infinite
+dimensional) on the space of fields, with generators $L^{\alpha\beta}$ that satisfy
+the Lorentz Lie Algebra.
+</strong></span></p>
+
+<hr />
+
+<h4 id="vector-fields">Vector Fields</h4>
+
+<p>Under Lorentz transformations,</p>
+
+\[A'^{\mu}(x) = \Lambda^\mu_{\ \nu} A^\nu(\Lambda^{-1}x)\]
+
+<p>From the fundamental and scalar representations we have,</p>
+
+\[\begin{aligned}
+A'^\mu(x)
+&amp;=
+\left(\delta^\mu_{\ \nu}
++ \frac{1}{2}\Omega_{\alpha\beta}(M^{\alpha\beta})^\mu_{\ \nu}\right)
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}L^{\alpha\beta}\right)
+A^\nu(x) \\[0.5em]
+&amp;=
+\delta^\mu_{\ \nu}
++ \frac{1}{2}\Omega_{\alpha\beta}
+\left((M^{\alpha\beta})^\mu_{\ \nu}
++ L^{\alpha\beta}\delta^\mu_{\ \nu}\right)
++ \mathcal{O}(\Omega^2) \\[0.5em]
+&amp;\equiv
+\delta^\mu_{\ \nu}
++ \frac{1}{2}\Omega_{\alpha\beta}(J^{\alpha\beta})^\mu_{\ \nu}
+\end{aligned}\]
+
+<p>where,</p>
+
+\[(J^{\alpha\beta})^\mu_{\ \nu}
+= (M^{\alpha\beta})^\mu_{\ \nu}
++ L^{\alpha\beta}\delta^\mu_{\ \nu}\]
+
+<p>We write,</p>
+
+\[A'^\mu(x) = D(\Lambda)^\mu_{\ \nu} A^\nu(x)\]
+
+<p>with,</p>
+
+\[D(\Lambda)=
+\begin{cases}
+\displaystyle
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}J^{\alpha\beta}\right),
+&amp; \text{infinitesimal transformations} \\[1em]
+\displaystyle
+e^{\frac{1}{2}\Omega_{\alpha\beta}J^{\alpha\beta}},
+&amp; \text{finite transformations}
+\end{cases}\]
+
+<p><span style="color:purple"><strong>
+We thus realize the vector representation of the Lorentz group on the space of
+fields with generators $J^{\alpha\beta}$ satisfying the Lorentz Lie Algebra.
+</strong></span></p>
+
+<p>From the previous two sections we deduce a (one-to-one?) correspondence between
+representations of the Lorentz group and the physical fields we wish to study.</p>
+
+<p>This motivates the search for further representations. In such a hunt, Dirac made
+use of the Clifford algebra to obtain the <em>spinor representation</em>, giving rise to
+a new class of QFTs (historically the order may be reversed).</p>
+
+<hr />
+
+<h4 id="spinor-fields">Spinor Fields</h4>
+
+<p>Introduce the $\gamma$-matrices satisfying</p>
+
+\[\{\gamma^\mu,\gamma^\nu\} = 2\eta^{\mu\nu}I\]
+
+<p>Define</p>
+
+\[S^{\mu\nu}
+:= \frac{i}{4}[\gamma^\mu,\gamma^\nu]\]
+
+<p><span style="color:purple"><strong>
+$S^{\mu\nu}$ satisfies the Lorentz Lie Algebra!
+</strong></span></p>
+
+<p>This gives a finite-dimensional representation of the Lorentz group.</p>
+
+<p>Spinor (Dirac) fields in four dimensions are written as</p>
+
+\[\Psi =
+\begin{pmatrix}
+\psi_1 \\
+\psi_2 \\
+\psi_3 \\
+\psi_4
+\end{pmatrix}\]
+
+<p>Under Lorentz transformations,</p>
+
+\[\Psi'(x) = S[\Lambda]\Psi(\Lambda^{-1}x)\]
+
+<p>with,</p>
+
+\[S[\Lambda]=
+\begin{cases}
+\displaystyle
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}S^{\alpha\beta}\right),
+&amp; \text{infinitesimal transformations} \\[1em]
+\displaystyle
+e^{\frac{1}{2}\Omega_{\alpha\beta}S^{\alpha\beta}},
+&amp; \text{finite transformations}
+\end{cases}\]
+
+<p>Thus,</p>
+
+\[\Psi'(x) = D(\Lambda)\Psi(x)\]
+
+<p>with,</p>
+
+\[D(\Lambda)=
+\begin{cases}
+\displaystyle
+\left(1+\frac{1}{2}\Omega_{\alpha\beta}\Xi^{\alpha\beta}\right),
+&amp; \text{infinitesimal transformations} \\[1em]
+\displaystyle
+e^{\frac{1}{2}\Omega_{\alpha\beta}\Xi^{\alpha\beta}},
+&amp; \text{finite transformations}
+\end{cases}\]
+
+<p>where,</p>
+
+\[(\Xi^{\alpha\beta})^\mu_{\ \nu}
+= (S^{\alpha\beta})^\mu_{\ \nu}
++ L^{\alpha\beta}\delta^\mu_{\ \nu}\]
+
+<p><span style="color:purple"><strong>
+We thus realize the spinor (Dirac) representation of the Lorentz group on the space
+of fields with generators $\Xi^{\alpha\beta}$ satisfying the Lorentz Lie Algebra.
+</strong></span></p>
+
+            </div>
+        </section>
+        <figure class="blog-divider">
+            <img src="/src/images/divider1.png" alt="">
+        </figure>
+    </main>
+
+    <footer id="footer">
+        <div class="message">
+            Art $\times$ Science
+        </div>
+        <div class="contact">
+            p.shubhang-sharma@tuta.io
+        </div>
+        <img src="src/vector/warp-science-bg.png" id="warp-grid" alt="Image credits: iStock">
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <!-- <script src="gsap.min.js"></script> -->
+    <script src="/src/js/farm-scroll.js"></script>
+
+</body>
+
+
+</html>
