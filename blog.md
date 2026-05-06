@@ -20,6 +20,13 @@ permalink: blog/
     {% endif %}
     {% endfor %}
 </div>
+{% if jekyll.environment == "production" %}
+<div class="counter">
+        <img style="display: block; margin-inline: auto; margin-top: 20px;"
+            src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fshubhang-sharma.github.io%2Fblog&label=Visitor+Count&icon=github&color=%23198754&message=&style=for-the-badge&tz=localtime">
+</div>
+{% endif %}
+
 
 <style>
     
